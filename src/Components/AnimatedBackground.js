@@ -60,8 +60,8 @@ const Body = styled.div`
         width: 20px;
         height: 20px;
         background: rgba(255, 255, 255, 0.6);
-        animation: ${flowUpwards} 20s linear infinite;
-        bottom: -15%;
+        animation: ${flowUpwards} 10s linear infinite;
+        bottom: -30%;
         border-radius:15%;
     }
 
@@ -69,75 +69,72 @@ const Body = styled.div`
         left: 25%;
         width: 100px;
         height: 100px;
-        animation-delay: 0s;
     }
 
     & .squares li:nth-child(2){
         left: 10%;
         width: 200px;
         height: 200px;
-        animation-delay: 2s;
-        animation-duration: 12s;
+        animation-duration: 15s;
     }
 
     & .squares li:nth-child(3){
         left: 70%;
         width: 20px;
         height: 20px;
-        animation-delay: 4s;
+        animation-duration: 20s;
+
     }
 
     & .squares li:nth-child(4){
         left: 40%;
         width: 60px;
         height: 60px;
-        animation-delay: 0s;
-        animation-duration: 18s;
+        animation-duration: 23s;
     }
 
     & .squares li:nth-child(5){
         left: 65%;
-        width: 20px;
-        height: 20px;
-        animation-delay: 0s;
+        width: 80px;
+        height: 80px;
+        animation-duration: 27s;
+
     }
 
     & .squares li:nth-child(6){
         left: 75%;
-        width: 150px;
-        height: 150px;
-        animation-delay: 3s;
+        width: 200px;
+        height: 200px;
+        animation-duration: 35s;
+
     }
 
     & .squares li:nth-child(7){
         left: 35%;
         width: 150px;
         height: 150px;
-        animation-delay: 7s;
+        animation-duration: 18s;
     }
 
     & .squares li:nth-child(8){
         left: 50%;
         width: 25px;
         height: 25px;
-        animation-delay: 15s;
-        animation-duration: 45s;
+        animation-duration: 50s;
     }
 
     & .squares li:nth-child(9){
         left: 20%;
         width: 15px;
         height: 15px;
-        animation-delay: 2s;
-        animation-duration: 35s;
+        animation-duration: 40s;
     }
 
     & .squares li:nth-child(10){
         left: 85%;
         width: 150px;
         height: 150px;
-        animation-delay: 0s;
-        animation-duration: 11s;
+        animation-duration: 16s;
     }
 
 }
