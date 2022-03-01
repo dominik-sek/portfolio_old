@@ -1,0 +1,19 @@
+html{
+  background: linear-gradient(to bottom, #013c7a, #01c0ff);
+  width:100%;
+  height:100%;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: Rubik,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
