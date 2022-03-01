@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {Routes, Route} from 'react-router-dom'
-import Home from 'Screens/Home';
+import Home from 'Screens/Home/Home';
 import About from 'Screens/About'
 import Contact from 'Screens/Contact'
 import Projects from 'Screens/Projects'
