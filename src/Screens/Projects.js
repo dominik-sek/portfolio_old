@@ -13,20 +13,9 @@ export default function Projects(params) {
                 <Sidebar path={'/home'} title={'Home'} direction={'left'}/>
                 <Sidebar path={'/contact'} title={'Contact'} direction={'right'}/>
 
-                <Content>
-                Projects
-                </Content>
+
 
             </Card>
         )
 };
 
-const Content = styled.section`
-    display:flex;
-    width:60%;
-    height:60%;
-    font-size:4em;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-`

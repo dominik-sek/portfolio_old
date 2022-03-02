@@ -8,45 +8,71 @@ export default function Sidebar(params) {
     const handleDirectionArrow = (direction, path) => {
         switch (direction) {
             case 'up':
-                return (<Link to={path} ><BsChevronCompactUp size={70} /></Link>)
+                return (<StyledLink to={path} ><BsChevronCompactUp className="button-up" /></StyledLink>)
             case 'down':
-                return (<Link to={path} > <BsChevronCompactDown size={70} /> </Link>)
+                return (<StyledLink to={path} > <BsChevronCompactDown className="button-down" /> </StyledLink>)
             case 'left':
-                return (<Link to={path} ><BsChevronCompactLeft size={70}/></Link>)
+                return (<StyledLink to={path} ><BsChevronCompactLeft className="button-left" /></StyledLink>)
             case 'right':
-                return (<Link to={path} ><BsChevronCompactRight size={70}/> </Link>)
+                return (<StyledLink to={path} ><BsChevronCompactRight className="button-right" /> </StyledLink>)
             default:
                 return undefined
         }
     }
     return (
         <Body onClick={params.onClick} direction={params.direction}>
-        <div>
-            {handleDirectionArrow(params.direction, params.path)}
-            </div>
+            <ArrowWrapper direction={params.direction}>
+                {handleDirectionArrow(params.direction, params.path)}
+            </ArrowWrapper>
             <Title direction={params.direction}>{params.title}</Title>
         </Body>
     )
 };
+
+const StyledLink = styled(Link)`
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    `
+const ArrowWrapper = styled.div`
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100%;
+
+`
 
 
 const Title = styled.div`
     opacity:0;
     transition: opacity 0.3s ease-in-out;
     font-size:2rem;
-    ${props=>{
-        if(props.direction ==='left'){
-            return`
+    ${props => {
+        if (props.direction === 'left') {
+            return `
                 transform:rotate(-90deg);
+                @media (max-width: 768px) {
+                    margin:2em;
+                    }
             `
         }
-        if(props.direction ==='right'){
-            return`
+        if (props.direction === 'right') {
+            return `
                 transform:rotate(90deg);
+                @media (max-width: 768px) {
+                    margin:2em;
+                    }
+
             `
         }
-        
+
     }}
+    @media (max-width: 768px) {
+        opacity:1;
+        font-size:1em;
+        position:absolute;
+    }
 `
 
 const Body = styled.div`
@@ -61,39 +87,59 @@ const Body = styled.div`
                 return `
                 top:0;
                 width:100%;
-                height:10%;
+                height:15%;
                 flex-direction:column;
+                @media (max-width: 768px) {
+                    flex-direction:column-reverse;
+                    }
             `
             case 'down':
                 return `
                 bottom:0;
                 width:100%;
-                height:10%;
+                height:15%;
                 flex-direction:column-reverse;
+                @media (max-width: 768px) {
+                    flex-direction:column;
+                    }
             `
             case 'left':
                 return `
                 left:0;
-                width:20%;
+                width:15%;
                 height:100%;
+
             `
             case 'right':
                 return `
                 right:0;
-                width:20%;
+                width:15%;
                 height:100%;
                 flex-direction:row-reverse;
+                @media (max-width: 768px) {
+                    flex-direction:row-reverse;
+                    }
             `
             default:
                 return undefined
         }
 
     }}
+
     position:absolute;
     display:flex;
     align-items:center;
-    &:hover{
-        cursor:pointer;
+    
+
+    & .button-up {
+        font-size:4rem;
+    }   & .button-down {
+        font-size:4rem;
+    }   & .button-left {
+        font-size:4rem;
+    }   & .button-right {
+        font-size:4rem;
     }
+
     
 `

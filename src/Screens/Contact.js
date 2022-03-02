@@ -14,20 +14,8 @@ export default function Contact(params) {
                 <Sidebar path={'/about'} title={'About me'} direction={'down'}/>
                 <Sidebar path={'/home'} title={'Home'} direction={'left'}/>
 
-                <Content>
-                Contact
-                </Content>
 
             </Card>
         )
 };
 
-const Content = styled.section`
-    display:flex;
-    width:60%;
-    height:60%;
-    font-size:4em;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-`
