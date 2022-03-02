@@ -1,13 +1,15 @@
 import styled, { keyframes } from "styled-components"
-import Sidebar from "./Components/Sidebar"
+import {BsChevronCompactRight} from 'react-icons/bs'
 export default function Home(params) {
     return (
         <Container>
             <HomeBody>
                {/* <img src={"https://cdn1.i-scmp.com/sites/default/files/styles/1200x800/public/images/methode/2017/04/06/0a2ae706-1a94-11e7-b4ed-ac719e54b474_1280x720_145124.jpg?itok=1PDxSxTA"}></img> */}
-               
+            <Sidebar>
+            <BsChevronCompactRight size={70} />
+
+            </Sidebar>
             </HomeBody>
-            <Sidebar/>
         </Container>
     )
 };
@@ -53,4 +55,25 @@ const Container = styled.div`
     align-items:center;
     width:100%;
     height:100%;
+`
+const Sidebar = styled.div`
+    border-top-right-radius:5vmin;
+    border-bottom-right-radius:5vmin;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-left:none;
+    position:absolute;
+    width:15%;
+    right:0;
+    height:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:0.5s ease-in-out;
+
+    &:hover{
+        background: rgba( 255, 255, 255, 0.80 );
+        cursor:pointer;
+    }
+    
 `
