@@ -1,13 +1,16 @@
 import styled from "styled-components"
 import { BsChevronCompactRight, BsChevronCompactLeft, BsChevronCompactUp, BsChevronCompactDown } from 'react-icons/bs'
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useLocation } from "react-router-dom"
 import React, { useEffect, useCallback } from 'react';
 
 
 export default function Sidebar(params) {
     const navigation = useNavigate();
-
+    const location = useLocation();
+    console.log(location.pathname);
     const handleKeyDown = useCallback((e) => {
+        if(location.pathname !== '/contact'){
+        
         if (e.key === 'ArrowRight') {
             if(params.direction === 'right'){
                 navigation(params.path)
@@ -28,7 +31,8 @@ export default function Sidebar(params) {
                 navigation(params.path)
             }
         }
-    }, [navigation, params.path, params.direction]);
+    }
+    }, [navigation, params.path, params.direction, location.pathname]);
 
     const handleSwipe = useCallback((e) => {
         if (e.direction === 'Right') {

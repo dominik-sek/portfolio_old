@@ -49,7 +49,6 @@ const projects = [
 export default function Projects(params) {
     return (
         <Card face={'top'} contentType={'list'} content={projects}>
-            {/* <img src={"https://cdn1.i-scmp.com/sites/default/files/styles/1200x800/public/images/methode/2017/04/06/0a2ae706-1a94-11e7-b4ed-ac719e54b474_1280x720_145124.jpg?itok=1PDxSxTA"}></img> */}
 
             <Sidebar path={'/about'} title={'About me'} direction={'down'} />
             <Sidebar path={'/home'} title={'Home'} direction={'left'} />
