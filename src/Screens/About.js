@@ -12,7 +12,7 @@ import { ReactComponent as Sass } from '../img/sass.svg';
 
 const about = () =>{
     return(
-        <section style={{fontSize:'1.25rem'}}>
+        <section>
             <p>My name is Dominik, I am a third year student at </p>
             <a style={{color:'var(--secondary-color)'}}href="https://pwsztar.edu.pl/">Academy of Science in Tarnow</a>
             <p>currently studying applied computer science.</p>
@@ -54,7 +54,6 @@ display:grid;
 padding:0;
 grid-template-columns:repeat(3,1fr);
 grid-template-rows:repeat(2,1fr);
-
     & li{
         margin:0.5em;
         padding:0.5em;
@@ -63,18 +62,17 @@ grid-template-rows:repeat(2,1fr);
         flex-direction:column;
         justify-content:center;
         align-items:center;
-        background-color:var(--primary-color);
         color:white;
         font-size:1.2em;
         font-weight:bold;
         text-align:center;
         height:3em;
         max-height:1.5em;
-        min-width:1.5em;
+        min-width:1em;
         transition:all 0.3s ease-in-out;
+        border:1px solid white;
         &:hover{
-            background-color:var(--secondary-color);
-            color:var(--primary-color);
+            background-color:var(--primary-color);
             cursor:pointer;
         }
         & svg{

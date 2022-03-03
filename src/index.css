@@ -15,6 +15,7 @@ html{
 :root{
   --primary-color: #01c0ff;
   --secondary-color: #013c7a;
+  --trenetary-color: #ffd600;
   --primary-gradient: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
   --hr-gradient:linear-gradient(90deg, rgba(1, 192, 255, 0.356) 0%, rgba(1,60,122,1) 50%, rgba(1, 192, 255, 0.356) 100%);
 }

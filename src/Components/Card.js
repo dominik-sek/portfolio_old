@@ -72,7 +72,7 @@ const Content = styled.div`
     align-items:center;
     text-align:center;
     @media (min-width: 966px) {
-        font-size:1.5em;
+        font-size:1.25em;
     }
 `
 const ContentAsList = styled(Content)`

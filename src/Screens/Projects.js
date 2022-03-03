@@ -55,7 +55,6 @@ export default function Projects(params) {
             <Sidebar path={'/contact'} title={'Contact'} direction={'up'} />
 
 
-
         </Card>
     )
 };
