@@ -12,7 +12,7 @@ const projects = [
         'desc': 'My portfolio website',
         'img': 'https://i.imgur.com/xeDpEwP.png',
         'github': 'https://github.com/gothic459/portfolio',
-        'live': '',
+        'live': 'https://dsek.dev',
         'tech': ['React', 'JS', 'Styled-components', 'HTML', 'CSS']
     },
     {

@@ -1,28 +1,25 @@
 import styled, { keyframes } from "styled-components"
-import { useState } from "react"
-import { useLocation,Link } from 'react-router-dom';
+import { useEffect, useState } from "react"
+import { useLocation, Link } from 'react-router-dom';
 import Sidebar from "Components/Sidebar";
-import Card from "Components/Card"
+import Card from "Components/Card";
 
-
-const handleSubmit = (e) =>{
-    e.preventDefault();
-    const name = e.target[0].value;
-    const email = e.target[1].value;
-    const message = e.target[2].value;
-
-    if(!email.includes('@') || !email.includes('.')){
-        //focus on email input
-        e.target[1].focus();
-    }
+const handleSubmit = (e, { setSubmitted }) => {
+    e.target[0].value = "";
+    e.target[1].value = "";
+    e.target[2].value = "";
+    setSubmitted(true);
 }
-const contact = () =>{
-    return(
-        <StyledForm onSubmit={handleSubmit}>
-            <h1>Contact me:</h1>
-            <StyledInput type="text" required placeholder="Your name"/>
-            <StyledInput type="email" required placeholder="Your email"/>
-            <StyledTextArea required placeholder="Your message"></StyledTextArea>
+
+const contact = ({ setSubmitted }, submitted) => {
+    return (
+
+        <StyledForm target="_blank" action="https://formsubmit.co/0f2d4c75d7d6f672c66393078f87fb39" method="POST" onSubmit={e => handleSubmit(e, { setSubmitted })}>
+            {submitted ? <Message>Thank you for your message!</Message> : <h1>Contact me</h1>}
+            <StyledInput type="text" name="name" required placeholder="Your name" />
+            <StyledInput type="email" name="email" required placeholder="Your email" />
+            <StyledTextArea name="message" required placeholder="Your message"></StyledTextArea>
+            <input type="hidden" name="_template" value="box" />
             <StyledButton type="submit">Send</StyledButton>
 
         </StyledForm>
@@ -30,22 +27,36 @@ const contact = () =>{
 }
 
 export default function Contact(params) {
-
+    const [submitted, setSubmitted] = useState(false);
+    useEffect(() => {
+        if (submitted) {
+            setTimeout(() => {
+                setSubmitted(false);
+            }, 3000);
+        }
+    }, [submitted]);
 
     return (
-            <Card face={'up'} 
-            content={contact()}>
+        <Card face={'up'}
+            content={contact({ setSubmitted }, submitted)}>
 
-                <Sidebar path={'/projects'} title={'Projects'} direction={'right'}/>
-                <Sidebar path={'/about'} title={'About me'} direction={'down'}/>
-                <Sidebar path={'/home'} title={'Home'} direction={'left'}/>
+            <Sidebar path={'/projects'} title={'Projects'} direction={'right'} />
+            <Sidebar path={'/about'} title={'About me'} direction={'down'} />
+            <Sidebar path={'/home'} title={'Home'} direction={'left'} />
 
-
-            </Card>
-        )
+        </Card>
+    )
 };
 
 
+const Message = styled.h1`
+    color: green;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    
+`
 
 const StyledForm = styled.form`
     display: flex;
@@ -60,7 +71,7 @@ const StyledForm = styled.form`
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
 `
-            
+
 const StyledInput = styled.input`
     width: 50%;
     height: 50px;

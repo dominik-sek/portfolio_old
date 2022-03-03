@@ -44,7 +44,7 @@ const Body = styled.div`
 `
 const Title = styled.div`
     height:15%;
-    font-size:0.8em;
+    font-size:1em;
     padding:0.5%;
     width:60%;
     left:20%;
@@ -70,7 +70,7 @@ const Image = styled.img`
 const Description = styled.div`
     height:90%;
     width:60%;
-    font-size:0.5em;
+    font-size:0.75em;
     margin-bottom:0 auto;
     position:absolute;
     display:flex;
