@@ -105,7 +105,6 @@ const Title = styled.div`
     opacity:0;
     transition: opacity 0.3s ease-in-out;
     font-size:1.75rem;
-    & :mousem
 
     @media (max-width: 850px) and (max-width: 1201px)  {
         opacity:1;
@@ -133,7 +132,7 @@ const ArrowWrapper = styled.div`
     margin:0.5%; 
     align-items:center;
 
-    @media (min-width: 900px)  {
+    @media (min-width: 1200px)  {
         width:100%;
         height:100%;
     }
@@ -160,6 +159,8 @@ const Body = styled.div`
                 flex-direction:column;
                 @media (max-width: 750px) and (max-width: 966px) {
                     flex-direction:column-reverse;
+                    justify-content:flex-start;
+
                     }
             `
             case 'down':
@@ -170,6 +171,8 @@ const Body = styled.div`
                 flex-direction:column-reverse;
                 @media (max-width: 750px) and (max-width: 966px) {
                     flex-direction:column;
+                    justify-content:flex-start;
+
                     }
             `
             case 'left':
@@ -181,7 +184,6 @@ const Body = styled.div`
                 @media (max-width: 750px) and (max-width: 966px) {
                     flex-direction:row-reverse;
                     justify-content:center;
-
                     }
             `
             case 'right':
