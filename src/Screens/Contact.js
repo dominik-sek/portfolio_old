@@ -1,23 +1,18 @@
 import styled from "styled-components";
-import { useEffect, useState } from "react";
 import Sidebar from "Components/Sidebar";
 import Card from "Components/Card";
 
-const handleSubmit = (e, { setSubmitted }) => {
-    e.target[0].value = "";
-    e.target[1].value = "";
-    e.target[2].value = "";
-    setSubmitted(true);
-}
 
-const contact = ({ setSubmitted }, submitted) => {
+const contact = () => {
     return (
 
-        <StyledForm target="_blank" action="https://formsubmit.co/0f2d4c75d7d6f672c66393078f87fb39" method="POST" onSubmit={e => handleSubmit(e, { setSubmitted })}>
-            {submitted ? <Message>Thank you for your message!</Message> : <h1>Contact me</h1>}
-            <StyledInput type="text" name="name" required placeholder="Your name" />
-            <StyledInput type="email" name="email" required placeholder="Your email" />
-            <StyledTextArea name="message" required placeholder="Your message"></StyledTextArea>
+        <StyledForm target="_blank" action="https://formsubmit.co/0f2d4c75d7d6f672c66393078f87fb39" method="POST" >
+            <h1>Contact me</h1>
+
+            <StyledInput type="text" name="name" placeholder="Your name" required />
+            <StyledInput type="email" name="email" placeholder="Your email" required />
+            <StyledTextArea name="message" placeholder="Your message" required></StyledTextArea>
+            <input type="hidden" name="_template" value="table"/>
             <StyledButton type="submit">Send</StyledButton>
 
         </StyledForm>
@@ -25,18 +20,11 @@ const contact = ({ setSubmitted }, submitted) => {
 }
 
 export default function Contact(params) {
-    const [submitted, setSubmitted] = useState(false);
-    useEffect(() => {
-        if (submitted) {
-            setTimeout(() => {
-                setSubmitted(false);
-            }, 3000);
-        }
-    }, [submitted]);
+
 
     return (
         <Card face={'up'}
-            content={contact({ setSubmitted }, submitted)}>
+            content={contact()}>
 
             <Sidebar path={'/projects'} title={'Projects'} direction={'right'} />
             <Sidebar path={'/about'} title={'About me'} direction={'down'} />
@@ -45,16 +33,6 @@ export default function Contact(params) {
         </Card>
     )
 };
-
-
-const Message = styled.h1`
-    color: green;
-    font-size: 2em;
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    
-`
 
 const StyledForm = styled.form`
     display: flex;
