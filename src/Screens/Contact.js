@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Sidebar from "Components/Sidebar";
 import Card from "Components/Card";
-
+import { useState, useEffect, useCallback } from "react";
 
 const contact = () => {
     return (
@@ -20,12 +20,47 @@ const contact = () => {
 }
 
 export default function Contact(params) {
+    const [showMessage, setShowMessage] = useState(false);
+    
+    const handleKeyDown = useCallback((e) => {
+            
+        if (e.key === 'ArrowRight') {
+            setShowMessage(true);
+        }
+        if (e.key === 'ArrowLeft') {
+            setShowMessage(true);
+        }
+        if (e.key === 'ArrowUp') {
+            setShowMessage(true);
+        }   
+        if (e.key === 'ArrowDown') {
+            setShowMessage(true);
+        }
+    
+    }, []);
+    
+    useEffect(()=>{
+        window.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        }
+    })
+
+    useEffect(() => {
+        if(showMessage){
+            setTimeout(() => {
+                setShowMessage(false);
+            }, 1000);
+        }
+    }, [showMessage]);
 
 
     return (
         <Card face={'up'}
             content={contact()}>
 
+            <NoArrowMessage usedArrow={showMessage}>You can't use arrow controls on this page</NoArrowMessage>
             <Sidebar path={'/projects'} title={'Projects'} direction={'right'} />
             <Sidebar path={'/about'} title={'About me'} direction={'down'} />
             <Sidebar path={'/home'} title={'Home'} direction={'left'} />
@@ -34,6 +69,17 @@ export default function Contact(params) {
     )
 };
 
+const NoArrowMessage = styled.h4`
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    opacity:${props => props.usedArrow ? '1' :'0'};
+    transition: opacity 0.5s;
+
+`
 const StyledForm = styled.form`
     display: flex;
     flex-direction: column;

@@ -10,7 +10,7 @@ export default function Sidebar(params) {
     console.log(location.pathname);
     const handleKeyDown = useCallback((e) => {
         if(location.pathname !== '/contact'){
-        
+            
         if (e.key === 'ArrowRight') {
             if(params.direction === 'right'){
                 navigation(params.path)
@@ -88,10 +88,10 @@ export default function Sidebar(params) {
     }
     return (
         <Body onClick={params.onClick} direction={params.direction}>
-            <ArrowWrapper direction={params.direction}>
+            <Title direction={params.direction}>{params.title}</Title>
+            <ArrowWrapper direction={params.direction}>    
                 {handleDirectionArrow(params.direction, params.path)}
             </ArrowWrapper>
-            <Title direction={params.direction}>{params.title}</Title>
         </Body>
     )
 };
@@ -175,8 +175,11 @@ const Body = styled.div`
                 left:0;
                 width:5%;
                 height:100%;
+                
                 @media (max-width: 750px) and (max-width: 966px) {
                     flex-direction:row-reverse;
+                    justify-content:center;
+
                     }
             `
             case 'right':
@@ -187,6 +190,8 @@ const Body = styled.div`
                 flex-direction:row-reverse;
                 @media (max-width: 750px) and (max-width: 966px) {
                     flex-direction:row;
+                    justify-content:center;
+
                     }
             `
             default:

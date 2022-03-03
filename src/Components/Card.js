@@ -47,6 +47,7 @@ const CardBody = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
+    flex-direction:column;
 
     @media (max-width: 966px) {
         width:80%;
