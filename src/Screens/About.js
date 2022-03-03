@@ -1,6 +1,4 @@
-import styled, { keyframes } from "styled-components"
-import { useState } from "react"
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
 import Sidebar from "Components/Sidebar";
 import Card from "Components/Card"
 import { ReactComponent as Html } from '../img/html5.svg';

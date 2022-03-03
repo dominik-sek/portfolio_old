@@ -1,6 +1,5 @@
-import styled, { keyframes } from "styled-components"
-import { useEffect, useState } from "react"
-import { useLocation, Link } from 'react-router-dom';
+import styled from "styled-components";
+import { useEffect, useState } from "react";
 import Sidebar from "Components/Sidebar";
 import Card from "Components/Card";
 

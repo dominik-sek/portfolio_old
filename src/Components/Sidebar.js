@@ -1,7 +1,7 @@
-import styled, { keyframes } from "styled-components"
+import styled from "styled-components"
 import { BsChevronCompactRight, BsChevronCompactLeft, BsChevronCompactUp, BsChevronCompactDown } from 'react-icons/bs'
 import { Link, useNavigate } from "react-router-dom"
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback } from 'react';
 
 
 export default function Sidebar(params) {

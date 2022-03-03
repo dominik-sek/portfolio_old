@@ -1,5 +1,3 @@
-import styled, { keyframes } from "styled-components"
-import { Link } from 'react-router-dom';
 import Sidebar from "Components/Sidebar";
 import Card from "Components/Card";
 import React, { useState, useEffect } from 'react';
@@ -18,7 +16,7 @@ export default function Home(params) {
     const [width, setWidth] = useState(window.innerWidth);
     useEffect(() => {
         window.addEventListener('resize', () => setWidth(window.innerWidth));
-    }, [window.innerWidth]);
+    }, []);
 
 
     return (

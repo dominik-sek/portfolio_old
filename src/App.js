@@ -5,7 +5,6 @@ import About from 'Screens/About'
 import Contact from 'Screens/Contact'
 import Projects from 'Screens/Projects'
 import AnimatedBackground from 'Components/AnimatedBackground';
-import {AnimatePresence} from 'framer-motion';
 
 
 function App() {

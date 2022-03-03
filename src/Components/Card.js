@@ -1,5 +1,5 @@
-import { AnimatePresence, motion } from "framer-motion";
-import styled, { keyframes } from "styled-components"
+import { AnimatePresence } from "framer-motion";
+import styled from "styled-components"
 import ProjectCard from "./ProjectCard";
 
 const ListContent = (content) => { 
