@@ -7,7 +7,6 @@ import React, { useEffect, useCallback } from 'react';
 export default function Sidebar(params) {
     const navigation = useNavigate();
     const location = useLocation();
-    console.log(location.pathname);
     const handleKeyDown = useCallback((e) => {
         if(location.pathname !== '/contact'){
             
