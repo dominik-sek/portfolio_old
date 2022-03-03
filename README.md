@@ -1,3 +1,3 @@
 # portfolio
-##portfolio website
-### still ``work in progress ``
+## portfolio website
+`work in progress `
