@@ -24,7 +24,6 @@ const TextContent = (content) => {
 }
 
 export default function Card(params) {
-    console.log(params.contentType);
     return (
         <Container>
             <CardBody face={params.face}>
@@ -64,16 +63,15 @@ const Container = styled.div`
     perspective:1000px;
     overflow:hidden;
 `
-const Content = styled.section`
+const Content = styled.div`
     display:flex;
     width:75%;
     height:70%;
     justify-content:center;
     align-items:center;
-    font-size:2em;
     text-align:center;
     @media (min-width: 966px) {
-        font-size:2em;
+        font-size:1.5em;
     }
 `
 const ContentAsList = styled(Content)`

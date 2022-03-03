@@ -1,9 +1,72 @@
 import styled, { keyframes } from "styled-components"
 import { BsChevronCompactRight, BsChevronCompactLeft, BsChevronCompactUp, BsChevronCompactDown } from 'react-icons/bs'
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import React, { useState, useEffect, useCallback } from 'react';
+
 
 export default function Sidebar(params) {
+    const navigation = useNavigate();
 
+    const handleKeyDown = useCallback((e) => {
+        if (e.key === 'ArrowRight') {
+            if(params.direction === 'right'){
+                navigation(params.path)
+            }
+        }
+        if (e.key === 'ArrowLeft') {
+            if(params.direction === 'left'){
+                navigation(params.path)
+            }
+        }
+        if (e.key === 'ArrowUp') {
+            if(params.direction === 'up'){
+                navigation(params.path)
+            }
+        }
+        if (e.key === 'ArrowDown') {
+            if(params.direction === 'down'){
+                navigation(params.path)
+            }
+        }
+    }, [navigation, params.path, params.direction]);
+
+    const handleSwipe = useCallback((e) => {
+        if (e.direction === 'Right') {
+            if(params.direction === 'right'){
+                navigation(params.path)
+            }
+        }
+        if (e.direction === 'Left') {
+            if(params.direction === 'left'){
+                navigation(params.path)
+            }
+        }
+        if (e.direction === 'Up') {
+            if(params.direction === 'up'){
+                navigation(params.path)
+            }
+        }
+        if (e.direction === 'Down') {
+            if(params.direction === 'down'){
+                navigation(params.path)
+            }
+        }
+    }, [navigation, params.path, params.direction]);
+
+
+    useEffect(() => {
+        document.addEventListener("keydown", handleKeyDown);
+        return () => {
+            document.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [handleKeyDown]);
+
+    useEffect(() => {
+        document.addEventListener("swipe", handleSwipe);
+        return () => {
+            document.removeEventListener("swipe", handleSwipe);
+        };
+    }, [handleSwipe]);
 
     const handleDirectionArrow = (direction, path) => {
         switch (direction) {
@@ -25,9 +88,7 @@ export default function Sidebar(params) {
                 {handleDirectionArrow(params.direction, params.path)}
             </ArrowWrapper>
             <Title direction={params.direction}>{params.title}</Title>
-
         </Body>
-
     )
 };
 
@@ -37,13 +98,12 @@ const StyledLink = styled(Link)`
     align-items:center;
     `
 
-
-
 const Title = styled.div`
     opacity:0;
     transition: opacity 0.3s ease-in-out;
     font-size:1.75rem;
-    
+    & :mousem
+
     @media (max-width: 850px) and (max-width: 1201px)  {
         opacity:1;
         font-size:1em;
@@ -88,9 +148,9 @@ const Body = styled.div`
         switch (props.direction) {
             case 'up':
                 return `
-                top:2%;
+                top:0;
+                height:5%;
                 width:100%;
-                height:13%;
                 flex-direction:column;
                 @media (max-width: 750px) and (max-width: 966px) {
                     flex-direction:column-reverse;
@@ -98,9 +158,9 @@ const Body = styled.div`
             `
             case 'down':
                 return `
-                bottom:2%;
+                bottom:0;
+                height:5%;
                 width:100%;
-                height:13%;
                 flex-direction:column-reverse;
                 @media (max-width: 750px) and (max-width: 966px) {
                     flex-direction:column;
@@ -108,8 +168,8 @@ const Body = styled.div`
             `
             case 'left':
                 return `
-                left:2%;
-                width:13%;
+                left:0;
+                width:5%;
                 height:100%;
                 @media (max-width: 750px) and (max-width: 966px) {
                     flex-direction:row-reverse;
@@ -117,8 +177,8 @@ const Body = styled.div`
             `
             case 'right':
                 return `
-                right:2%;
-                width:13%;
+                right:0;
+                width:5%;
                 height:100%;
                 flex-direction:row-reverse;
                 @media (max-width: 750px) and (max-width: 966px) {
@@ -132,13 +192,16 @@ const Body = styled.div`
     }}
 
     & .button-up {
-        font-size:4rem;
-    }   & .button-down {
-        font-size:4rem;
-    }   & .button-left {
-        font-size:4rem;
-    }   & .button-right {
-        font-size:4rem;
+    font-size:4rem;
+    }   
+    & .button-down {
+    font-size:4rem;
+    }   
+    & .button-left {
+    font-size:4rem;
+    }  
+     & .button-right {
+    font-size:4rem;
     }
 
     

@@ -1,21 +1,29 @@
 import styled, { keyframes } from "styled-components"
-import { useState } from "react"
 import { Link } from 'react-router-dom';
 import Sidebar from "Components/Sidebar";
-import Card from "Components/Card"
+import Card from "Components/Card";
+import React, { useState, useEffect } from 'react';
 
-const home = ()=>{
+const home = (width)=>{
     return (
         <div>
             <h1 style={{fontSize:'5em'}} >Hi!</h1>
-            <h4>Use the controls on the sides to navigate</h4>
+            <h4> </h4>
+            {width > 800 ? <h4>Use the arrows on your keyboard or the controls on the sides </h4> : <h4>Swipe</h4>}
+            <h4>to navigate through the site</h4>
         </div>
     )
 }
 export default function Home(params) {
+    const [width, setWidth] = useState(window.innerWidth);
+    useEffect(() => {
+        window.addEventListener('resize', () => setWidth(window.innerWidth));
+    }, [window.innerWidth]);
+
+
     return (
             <Card face={'left'}
-            content={home()}
+            content={home(width)}
             >
 
                 <Sidebar path={'/projects'} title={'Projects'} direction={'right'}/>
