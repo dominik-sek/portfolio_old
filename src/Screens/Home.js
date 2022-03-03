@@ -7,7 +7,7 @@ const home = (width)=>{
         <div>
             <h1 style={{fontSize:'5em'}} >Hi!</h1>
             <h4> </h4>
-            {width > 800 ? <h4>Use the arrows on your keyboard or the controls on the sides </h4> : <h4>Swipe</h4>}
+            {width > 800 ? <h4>Use the arrows on your keyboard or the controls on the sides </h4> : <h4>Use the controls on the sides</h4>}
             <h4>to navigate through the site</h4>
         </div>
     )
