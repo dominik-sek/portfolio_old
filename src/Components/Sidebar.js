@@ -157,7 +157,7 @@ const Body = styled.div`
                 height:5%;
                 width:100%;
                 flex-direction:column;
-                @media (max-width: 750px) and (max-width: 966px) {
+                @media (max-width: 750px) and (max-width: 1200px) {
                     flex-direction:column-reverse;
                     justify-content:flex-start;
 
@@ -169,7 +169,7 @@ const Body = styled.div`
                 height:5%;
                 width:100%;
                 flex-direction:column-reverse;
-                @media (max-width: 750px) and (max-width: 966px) {
+                @media (max-width: 750px) and (max-width: 1200px) {
                     flex-direction:column;
                     justify-content:flex-start;
 
@@ -181,7 +181,7 @@ const Body = styled.div`
                 width:5%;
                 height:100%;
                 
-                @media (max-width: 750px) and (max-width: 966px) {
+                @media (max-width: 750px) and (max-width: 1200px) {
                     flex-direction:row-reverse;
                     justify-content:center;
                     }
@@ -192,7 +192,7 @@ const Body = styled.div`
                 width:5%;
                 height:100%;
                 flex-direction:row-reverse;
-                @media (max-width: 750px) and (max-width: 966px) {
+                @media (max-width: 750px) and (max-width: 1200px) {
                     flex-direction:row;
                     justify-content:center;
 
