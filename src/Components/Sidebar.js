@@ -34,14 +34,7 @@ const StyledLink = styled(Link)`
     justify-content:center;
     align-items:center;
     `
-const ArrowWrapper = styled.div`
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    width:100%;
-    height:100%;
 
-`
 
 
 const Title = styled.div`
@@ -52,7 +45,7 @@ const Title = styled.div`
         if (props.direction === 'left') {
             return `
                 transform:rotate(-90deg);
-                @media (max-width: 768px) {
+                @media (max-width: 966px) {
                     margin:2em;
                     }
             `
@@ -60,7 +53,7 @@ const Title = styled.div`
         if (props.direction === 'right') {
             return `
                 transform:rotate(90deg);
-                @media (max-width: 768px) {
+                @media (max-width: 966px) {
                     margin:2em;
                     }
 
@@ -68,11 +61,20 @@ const Title = styled.div`
         }
 
     }}
-    @media (max-width: 768px) {
+    @media (max-width: 966px) {
         opacity:1;
         font-size:1em;
         position:absolute;
     }
+`
+
+const ArrowWrapper = styled.div`
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:100%;
+
 `
 
 const Body = styled.div`
@@ -89,7 +91,7 @@ const Body = styled.div`
                 width:100%;
                 height:15%;
                 flex-direction:column;
-                @media (max-width: 768px) {
+                @media (max-width: 966px) {
                     flex-direction:column-reverse;
                     }
             `
@@ -99,7 +101,7 @@ const Body = styled.div`
                 width:100%;
                 height:15%;
                 flex-direction:column-reverse;
-                @media (max-width: 768px) {
+                @media (max-width: 966px) {
                     flex-direction:column;
                     }
             `
@@ -116,7 +118,7 @@ const Body = styled.div`
                 width:15%;
                 height:100%;
                 flex-direction:row-reverse;
-                @media (max-width: 768px) {
+                @media (max-width: 966px) {
                     flex-direction:row-reverse;
                     }
             `
