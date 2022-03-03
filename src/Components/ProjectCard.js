@@ -35,6 +35,11 @@ const Body = styled.div`
     min-height:20%;
     background: rgba( 255, 255, 255, 0.55 );
     margin:0.5%;
+    @media (max-width: 966px) {
+        height:100%;
+        min-height:30%;
+        margin:5%;
+    }
     
 `
 const Title = styled.div`
@@ -55,6 +60,12 @@ const Image = styled.img`
     height:100%;
     position:absolute;
     left:0;
+    @media (max-width: 966px) {
+        width:100%;
+        height:100%;
+        opacity:0.4;
+    }
+
 `
 const Description = styled.div`
     height:90%;

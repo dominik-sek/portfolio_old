@@ -7,8 +7,20 @@ import Card from "Components/Card"
 const about = () =>{
     return(
         <div>
-            <h1 style={{fontSize:'5em'}} >Hi!</h1>
-
+            <h1>Hi!</h1>
+            <p>My name is Dominik, I am a third year student at </p>
+            <a style={{color:'var(--primary-color)'}}href="https://pwsztar.edu.pl/">Academy of Science in Tarnow</a>
+            <p>Technologies that I am familiar with:</p>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>MongoDB</li>
+                <li>PostgreSQL</li>
+            </ul>
         </div>
 
     )

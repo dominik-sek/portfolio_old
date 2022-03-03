@@ -41,7 +41,6 @@ const CardBody = styled.div`
     width:80%;
     height:90%;
     z-index:999;
-    padding-left:1%;
     background: rgba( 255, 255, 255, 0.55 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 5px );
@@ -71,6 +70,7 @@ const Content = styled.section`
     height:70%;
     justify-content:center;
     align-items:center;
+    font-size:2em;
     text-align:center;
     @media (min-width: 966px) {
         font-size:2em;

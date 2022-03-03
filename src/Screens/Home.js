@@ -22,8 +22,6 @@ export default function Home(params) {
                 <Sidebar path={'/about'} title={'About me'} direction={'down'}/>
                 <Sidebar path={'/contact'} title={'Contact'} direction={'up'}/>
 
-
-
             </Card>
         )
 };

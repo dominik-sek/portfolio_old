@@ -25,7 +25,9 @@ export default function Sidebar(params) {
                 {handleDirectionArrow(params.direction, params.path)}
             </ArrowWrapper>
             <Title direction={params.direction}>{params.title}</Title>
+
         </Body>
+
     )
 };
 
@@ -40,37 +42,32 @@ const StyledLink = styled(Link)`
 const Title = styled.div`
     opacity:0;
     transition: opacity 0.3s ease-in-out;
-    font-size:2rem;
+    font-size:1.75rem;
+    
+    @media (max-width: 850px) and (max-width: 1201px)  {
+        opacity:1;
+        font-size:1em;
+    }
+
     ${props => {
         if (props.direction === 'left') {
             return `
                 transform:rotate(-90deg);
-                @media (max-width: 966px) {
-                    margin:2em;
-                    }
             `
         }
         if (props.direction === 'right') {
             return `
                 transform:rotate(90deg);
-                @media (max-width: 966px) {
-                    margin:2em;
-                    }
-
             `
         }
 
     }}
-    @media (max-width: 966px) {
-        opacity:1;
-        font-size:1em;
-        position:absolute;
-    }
 `
 
 const ArrowWrapper = styled.div`
     display:flex;
     justify-content:center;
+    margin:0.5%; 
     align-items:center;
     width:100%;
     height:100%;
@@ -78,6 +75,10 @@ const ArrowWrapper = styled.div`
 `
 
 const Body = styled.div`
+
+    position:absolute;
+    display:flex;
+    align-items:center;
     &:hover ${Title}{
         opacity:1;
     }
@@ -87,39 +88,41 @@ const Body = styled.div`
         switch (props.direction) {
             case 'up':
                 return `
-                top:0;
+                top:2%;
                 width:100%;
-                height:15%;
+                height:13%;
                 flex-direction:column;
-                @media (max-width: 966px) {
+                @media (max-width: 750px) and (max-width: 966px) {
                     flex-direction:column-reverse;
                     }
             `
             case 'down':
                 return `
-                bottom:0;
+                bottom:2%;
                 width:100%;
-                height:15%;
+                height:13%;
                 flex-direction:column-reverse;
-                @media (max-width: 966px) {
+                @media (max-width: 750px) and (max-width: 966px) {
                     flex-direction:column;
                     }
             `
             case 'left':
                 return `
-                left:0;
-                width:15%;
+                left:2%;
+                width:13%;
                 height:100%;
-
+                @media (max-width: 750px) and (max-width: 966px) {
+                    flex-direction:row-reverse;
+                    }
             `
             case 'right':
                 return `
-                right:0;
-                width:15%;
+                right:2%;
+                width:13%;
                 height:100%;
                 flex-direction:row-reverse;
-                @media (max-width: 966px) {
-                    flex-direction:row-reverse;
+                @media (max-width: 750px) and (max-width: 966px) {
+                    flex-direction:row;
                     }
             `
             default:
@@ -127,11 +130,6 @@ const Body = styled.div`
         }
 
     }}
-
-    position:absolute;
-    display:flex;
-    align-items:center;
-    
 
     & .button-up {
         font-size:4rem;
