@@ -18,7 +18,6 @@ const contact = ({ setSubmitted }, submitted) => {
             <StyledInput type="text" name="name" required placeholder="Your name" />
             <StyledInput type="email" name="email" required placeholder="Your email" />
             <StyledTextArea name="message" required placeholder="Your message"></StyledTextArea>
-            <input type="hidden" name="_template" value="box" />
             <StyledButton type="submit">Send</StyledButton>
 
         </StyledForm>
