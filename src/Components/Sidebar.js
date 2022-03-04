@@ -114,12 +114,14 @@ const Title = styled.div`
     ${props => {
         if (props.direction === 'left') {
             return `
-                transform:rotate(-90deg);
+                writing-mode:vertical-rl;
+                transform: rotate(180deg);
+
             `
         }
         if (props.direction === 'right') {
             return `
-                transform:rotate(90deg);
+                writing-mode:vertical-rl;
             `
         }
 
