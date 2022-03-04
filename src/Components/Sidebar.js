@@ -33,29 +33,6 @@ export default function Sidebar(params) {
     }
     }, [navigation, params.path, params.direction, location.pathname]);
 
-    const handleSwipe = useCallback((e) => {
-        if (e.direction === 'Right') {
-            if(params.direction === 'right'){
-                navigation(params.path)
-            }
-        }
-        if (e.direction === 'Left') {
-            if(params.direction === 'left'){
-                navigation(params.path)
-            }
-        }
-        if (e.direction === 'Up') {
-            if(params.direction === 'up'){
-                navigation(params.path)
-            }
-        }
-        if (e.direction === 'Down') {
-            if(params.direction === 'down'){
-                navigation(params.path)
-            }
-        }
-    }, [navigation, params.path, params.direction]);
-
 
     useEffect(() => {
         document.addEventListener("keydown", handleKeyDown);
@@ -64,12 +41,7 @@ export default function Sidebar(params) {
         };
     }, [handleKeyDown]);
 
-    useEffect(() => {
-        document.addEventListener("swipe", handleSwipe);
-        return () => {
-            document.removeEventListener("swipe", handleSwipe);
-        };
-    }, [handleSwipe]);
+
 
     const handleDirectionArrow = (direction, path) => {
         switch (direction) {
@@ -156,46 +128,56 @@ const Body = styled.div`
             case 'up':
                 return `
                 top:0;
-                height:5%;
                 width:100%;
                 flex-direction:column;
                 @media (max-width: 1200px) {
                     flex-direction:column-reverse;
                     justify-content:center;
                     }
+                @media (max-width: 768px) {
+                    top:-10%;
+                }
+
             `
             case 'down':
                 return `
                 bottom:0;
-                height:5%;
                 width:100%;
                 flex-direction:column-reverse;
                 @media (max-width: 1200px) {
                     flex-direction:column;
                     justify-content:center;
                     }
+                    @media (max-width: 768px){
+                    bottom:-10%;
+                }
+
             `
             case 'left':
                 return `
                 left:0;
-                width:5%;
                 height:100%;
                 
                 @media (max-width: 1200px) {
                     flex-direction:row-reverse;
                     justify-content:center;
                     }
+                    @media (max-width: 768px){
+                    left:-10%;
+                }
             `
             case 'right':
                 return `
                 right:0;
-                width:5%;
                 height:100%;
                 flex-direction:row-reverse;
                 @media (max-width: 1200px) {
                     flex-direction:row;
                     justify-content:center;
                     }
+                    @media (max-width: 768px){
+                    right:-10%;
+                }
             `
             default:
                 return undefined
