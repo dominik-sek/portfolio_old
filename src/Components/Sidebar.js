@@ -161,7 +161,7 @@ const Body = styled.div`
                 flex-direction:column;
                 @media (max-width: 1200px) {
                     flex-direction:column-reverse;
-                    justify-content:flex-start;
+                    justify-content:center;
                     }
             `
             case 'down':
@@ -172,7 +172,7 @@ const Body = styled.div`
                 flex-direction:column-reverse;
                 @media (max-width: 1200px) {
                     flex-direction:column;
-                    justify-content:flex-start;
+                    justify-content:center;
                     }
             `
             case 'left':
