@@ -134,7 +134,7 @@ const Body = styled.div`
                     justify-content:center;
                     }
                 @media (max-width: 768px) {
-                    top:-10%;
+                    top:-6%;
                 }
 
             `
@@ -148,7 +148,7 @@ const Body = styled.div`
                     justify-content:center;
                     }
                     @media (max-width: 768px){
-                    bottom:-10%;
+                    bottom:-6%;
                 }
 
             `

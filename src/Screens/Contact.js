@@ -137,11 +137,10 @@ const StyledTextArea = styled.textarea`
 `;
 const StyledButton = styled.button`
 
-    width: 30%;
-    height: 50px;
+    width: 60%;
+    height: 10%;
     border: none;
     border-radius: 1em;
-
 
     padding: 0.5em;
     margin: 0.5em;
@@ -152,6 +151,9 @@ const StyledButton = styled.button`
     }
     &:focus{
         outline:none;
+    }
+    @media(min-width: 966px){
+        width: 30%;
     }
 
     

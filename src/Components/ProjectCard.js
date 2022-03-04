@@ -19,6 +19,7 @@ const StyledAiOutlineGithub = styled(AiOutlineGithub)`
     &:hover {
         color: #0077b5;
     }
+
 `;
 const StyledAiOutlineLink = styled(AiOutlineLink)`
     &:hover {
@@ -30,15 +31,17 @@ const Body = styled.div`
     position:relative;
     display:flex;
     justify-content:center;
-    width:100%;
-    height:20%;
-    min-height:20%;
+    width:70%;
+    height:100%;
+    min-height:30%;
+    margin:5%;
     background: rgba( 255, 255, 255, 0.55 );
-    margin:0.5%;
-    @media (max-width: 966px) {
-        height:100%;
-        min-height:30%;
-        margin:5%;
+
+    @media (min-width: 966px) {
+        height:20%;
+        min-height:20%;
+        margin:0.5%;
+        width:100%;
     }
     
 `
@@ -54,6 +57,7 @@ const Title = styled.div`
     justify-content:center;
     align-items:center;
     top:0;
+
 `
 const Image = styled.img`
     width:20%;
@@ -81,7 +85,7 @@ const Description = styled.div`
     right:20%;
 `
 const Links = styled.div`
-    width:15%;
+    width:30%;
     height:100%;
     position:absolute;
     right:0;
@@ -94,5 +98,8 @@ const Links = styled.div`
         justify-content:center;
         align-items:center;
     }
-    
+    @media (min-width:966px){
+        width:15%;
+
+    }
 `
