@@ -88,7 +88,6 @@ const Title = styled.div`
             return `
                 writing-mode:vertical-rl;
                 transform: rotate(180deg);
-
             `
         }
         if (props.direction === 'right') {

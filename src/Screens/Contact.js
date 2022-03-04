@@ -13,7 +13,7 @@ const contact = () => {
             <StyledInput type="email" name="email" placeholder="Your email" required />
             <StyledTextArea name="message" placeholder="Your message" required></StyledTextArea>
             <input type="hidden" name="_template" value="table"/>
-            <StyledButton type="submit">Send</StyledButton>
+            <StyledButton type="submit" >Send</StyledButton>
 
         </StyledForm>
     )
@@ -92,11 +92,14 @@ const StyledForm = styled.form`
     text-align: center;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
+    & *{
+        font-family: 'Titillium Web', sans-serif;
+    }
 `
 
 const StyledInput = styled.input`
-    width: 50%;
-    height: 50px;
+    width:100%;
+    height:5%;
     border: none;
     border-radius: 1em;
     border-bottom: 1px solid black;
@@ -106,10 +109,15 @@ const StyledInput = styled.input`
     &:focus{
         outline-color: var(--primary-color);
     }
+
+    @media (min-width: 966px){
+        width: 50%;
+        height: 10%;
+    }
 `;
 const StyledTextArea = styled.textarea`
-    width: 40%;
-    height: 50%;
+    width: 100%;
+    height: 40%;
     border: none;
     border-radius: 1em;
     border-bottom: 1px solid black;
@@ -121,6 +129,11 @@ const StyledTextArea = styled.textarea`
     &:focus{
         outline-color: var(--primary-color);
     }
+
+    @media(min-width: 966px){
+        width: 50%;
+        height: 50%;
+    }
 `;
 const StyledButton = styled.button`
 
@@ -128,7 +141,8 @@ const StyledButton = styled.button`
     height: 50px;
     border: none;
     border-radius: 1em;
-    border-bottom: 1px solid black;
+
+
     padding: 0.5em;
     margin: 0.5em;
     transition: all 0.3s ease-in-out;
@@ -139,6 +153,12 @@ const StyledButton = styled.button`
     &:focus{
         outline:none;
     }
+
+    
+    background: rgba( 255, 255, 255, 0.5); );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 `;
 
 
