@@ -133,9 +133,7 @@ const Body = styled.div`
                     flex-direction:column-reverse;
                     justify-content:center;
                     }
-                @media (max-width: 768px) {
-                    top:-6%;
-                }
+
 
             `
             case 'down':
@@ -147,9 +145,7 @@ const Body = styled.div`
                     flex-direction:column;
                     justify-content:center;
                     }
-                    @media (max-width: 768px){
-                    bottom:-6%;
-                }
+
 
             `
             case 'left':
@@ -160,10 +156,9 @@ const Body = styled.div`
                 @media (max-width: 1200px) {
                     flex-direction:row-reverse;
                     justify-content:center;
+                    width:10%;
                     }
-                    @media (max-width: 768px){
-                    left:-10%;
-                }
+
             `
             case 'right':
                 return `
@@ -173,10 +168,9 @@ const Body = styled.div`
                 @media (max-width: 1200px) {
                     flex-direction:row;
                     justify-content:center;
+                    width:10%;
                     }
-                    @media (max-width: 768px){
-                    right:-10%;
-                }
+
             `
             default:
                 return undefined
