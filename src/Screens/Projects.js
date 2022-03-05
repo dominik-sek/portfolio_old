@@ -26,7 +26,7 @@ const projects = [
         'img': 'https://camo.githubusercontent.com/ae74715258ef203ba8f3e9f3e052122ece0b1379478d2063404c680e4f56b326/68747470733a2f2f696d6775722e636f6d2f5a4449417678672e706e67',
         'github': 'https://github.com/gothic459/movies-db',
         'live': '',
-        'tags': ['React', 'JS', 'Styled-components', 'HTML', 'CSS']
+        'tags': ['React', 'HTML','JS','CSS', 'Styled-components']
     },
     {
         'title': 'Online restaurant',
@@ -34,7 +34,7 @@ const projects = [
         'img': 'https://i.imgur.com/2Gp6tEB.png',
         'github': 'https://github.com/gothic459/online-restaurant',
         'live': 'https://pizzadev-front.herokuapp.com/',
-        'tags': ['React', 'JS', 'Styled-components', 'HTML', 'CSS']
+        'tags': ['React', 'HTML','JS','CSS', 'Styled-components']
     },
     {
         'title': 'Movie database 2',
@@ -42,7 +42,7 @@ const projects = [
         'img': 'https://i.imgur.com/2IVAhYY.png',
         'github': 'https://github.com/gothic459/movie-db',
         'live': '',
-        'tags': ['React', 'JS', 'Styled-components', 'HTML', 'CSS']
+        'tags': ['React', 'HTML','JS','CSS', 'Styled-components']
     }
 
 ]
