@@ -17,8 +17,8 @@ const about = () =>{
             <a style={{color:'var(--secondary-color)'}}href="https://pwsztar.edu.pl/">Academy of Science in Tarnow</a>
             <p>currently studying applied computer science.</p>
             <StyledHr/>
-            <p>Technologies that I am familiar with:</p>
-            <Stack>
+            <p>I am familiar with:</p>
+            <StyledUl>
                 <li><Html/></li>
                 <li><Css/></li>
                 <li><Javascript/></li>
@@ -27,7 +27,7 @@ const about = () =>{
                 <li>💅</li> 
                 <li><MongoDB style={{width:'80%'}}/></li>
                 <li><PostgreSQL/></li>
-            </Stack>
+            </StyledUl>
             <StyledHr/>
             <p>I love creating websites from scratch, seeing them go from an <span style={{color:'#fff'}}>idea</span> to a fully fledged website.</p>
             
@@ -49,13 +49,13 @@ export default function About(params) {
         )
 };
 
-const Stack = styled.ul`
+const StyledUl = styled.ul`
 display:grid;
 padding:0;
 grid-template-columns:repeat(3,1fr);
 grid-template-rows:repeat(2,1fr);
+
     & li{
-        margin:0.5em;
         padding:0.5em;
         border-radius:5px;
         display:flex;
@@ -67,18 +67,13 @@ grid-template-rows:repeat(2,1fr);
         font-weight:bold;
         text-align:center;
         height:3em;
-        max-height:1.5em;
+        max-height:2em;
         min-width:1em;
         transition:all 0.3s ease-in-out;
         &:hover{
             background-color:#E6E6EA;
             cursor:pointer;
         }
-        & svg{
-            width:10em;
-        }
-
-        backface-visibility:hidden;
 
     }
 

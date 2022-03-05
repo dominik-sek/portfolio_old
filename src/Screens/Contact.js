@@ -99,7 +99,7 @@ const StyledForm = styled.form`
 
 const StyledInput = styled.input`
     width:100%;
-    height:5%;
+    height:10%;
     border: none;
     border-radius: 1em;
     border-bottom: 1px solid black;
@@ -108,11 +108,13 @@ const StyledInput = styled.input`
     transition: all 0.3s ease-in-out;
     &:focus{
         outline-color: var(--primary-color);
+        outline-style: solid;
+        outline-width:2px;
     }
 
-    @media (min-width: 966px){
-        width: 50%;
-        height: 10%;
+    @media (min-width: 768px){
+        width: 60%;
+        height: 5%;
     }
 `;
 const StyledTextArea = styled.textarea`
@@ -124,15 +126,16 @@ const StyledTextArea = styled.textarea`
     padding: 0.5em;
     margin: 0.5em;
     resize: none;
-    outline-color: var(--primary-color);
-
+    transition: all 0.3s ease-in-out;
     &:focus{
         outline-color: var(--primary-color);
-    }
+        outline-style: solid;
+        outline-width:2px;
+    } 
 
-    @media(min-width: 966px){
-        width: 50%;
-        height: 50%;
+    @media(min-width: 768px){
+        width: 40%;
+        height: 30%;
     }
 `;
 const StyledButton = styled.button`
@@ -141,7 +144,6 @@ const StyledButton = styled.button`
     height: 10%;
     border: none;
     border-radius: 1em;
-
     padding: 0.5em;
     margin: 0.5em;
     transition: all 0.3s ease-in-out;
@@ -152,8 +154,8 @@ const StyledButton = styled.button`
     &:focus{
         outline:none;
     }
-    @media(min-width: 966px){
-        width: 30%;
+    @media(min-width: 768px){
+        width: 25%;
     }
 
     
