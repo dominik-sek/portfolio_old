@@ -110,7 +110,7 @@ const StyledInput = styled.input`
         outline-color: var(--primary-color);
     }
 
-    @media (min-width: 966px){
+    @media (min-width: 768px){
         width: 50%;
         height: 10%;
     }
@@ -130,7 +130,7 @@ const StyledTextArea = styled.textarea`
         outline-color: var(--primary-color);
     }
 
-    @media(min-width: 966px){
+    @media(min-width: 768px){
         width: 50%;
         height: 50%;
     }
@@ -152,7 +152,7 @@ const StyledButton = styled.button`
     &:focus{
         outline:none;
     }
-    @media(min-width: 966px){
+    @media(min-width: 768px){
         width: 30%;
     }
 

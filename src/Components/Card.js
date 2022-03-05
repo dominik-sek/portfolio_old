@@ -48,7 +48,7 @@ const CardBody = styled.div`
     align-items:center;
     flex-direction:column;
 
-    @media (min-width: 966px) {
+    @media (min-width: 768px) {
         width:80%;
         height:90%;
         border-radius:5vmin;
@@ -72,8 +72,8 @@ const Content = styled.div`
     justify-content:center;
     align-items:center;
     text-align:center;
-    @media (min-width: 966px) {
-        font-size:1.25em;
+    @media (min-width: 768px) {
+        font-size:1em;
     }
 `
 const ContentAsList = styled(Content)`

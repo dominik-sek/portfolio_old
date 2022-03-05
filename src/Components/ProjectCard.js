@@ -39,7 +39,7 @@ const Body = styled.div`
     margin:5%;
     background: rgba( 255, 255, 255, 0.55 );
 
-    @media (min-width: 966px) {
+    @media (min-width: 768px) {
         height:20%;
         min-height:10%;
         margin:0.5%;
@@ -69,7 +69,7 @@ const Image = styled.img`
     height:100%;
     opacity:0.3;
 
-    @media (min-width: 966px) {
+    @media (min-width: 768px) {
     width:20%;
     height:100%;
     opacity:1;
@@ -101,15 +101,15 @@ const Links = styled.div`
     align-items:center;
     & svg {
             color:white;
-            height:3em;
-            width:3em;
+            height:2em;
+            width:2em;
         }
     & a {
         display:flex;
         justify-content:center;
         align-items:center;
     }
-    @media (min-width:966px){
+    @media (min-width:768px){
         width:15%;
         & svg {
             color:black;
