@@ -41,7 +41,7 @@ export default function Sidebar(params) {
     }, [handleKeyDown]);
 
 
-
+    //title should be also a link = new component
     const handleDirectionArrow = (direction, path) => {
         switch (direction) {
             case 'up':
@@ -58,7 +58,7 @@ export default function Sidebar(params) {
     }
     return (
         <Body onClick={params.onClick} direction={params.direction}>
-            <Title direction={params.direction}>{params.title}</Title>
+            <Title direction={params.direction}><StyledLink to={params.path}>{params.title}</StyledLink></Title>
             <ArrowWrapper direction={params.direction}>    
                 {handleDirectionArrow(params.direction, params.path)}
             </ArrowWrapper>
@@ -70,6 +70,7 @@ const StyledLink = styled(Link)`
     display:flex;
     justify-content:center;
     align-items:center;
+    
     `
 
 const Title = styled.div`

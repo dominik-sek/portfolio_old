@@ -3,7 +3,7 @@ import Card from "Components/Card"
 //this to db
 // v
 const projects = [
-    
+
     {
         'title': 'Portfolio website',
         'desc': 'My portfolio website',

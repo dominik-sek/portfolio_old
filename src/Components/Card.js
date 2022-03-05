@@ -54,6 +54,7 @@ const CardBody = styled.div`
         border-radius:5vmin;
 
     }
+    
 `
 const Container = styled.div` 
     display:flex;
@@ -64,6 +65,7 @@ const Container = styled.div`
     height:100%;
     perspective:1000px;
     overflow:hidden;
+    
 `
 const Content = styled.div`
     display:flex;
@@ -73,6 +75,7 @@ const Content = styled.div`
     align-items:center;
     text-align:center;
     font-size:1.2em;
+    
     @media (min-width: 966px) {
         font-size:1.25em;
     }
@@ -86,6 +89,7 @@ const ContentAsList = styled(Content)`
     &::-webkit-scrollbar {
         display: none;
     }
+
 
 `
 
