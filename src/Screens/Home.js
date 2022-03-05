@@ -19,7 +19,7 @@ const home = (width)=>{
     )
 }
 export default function Home(params) {
-    const [width, setWidth] = useState(0);
+    const [width, setWidth] = useState(window.innerWidth);
 
     //doesnt remove the listener for some reason
     useEffect(() => {
