@@ -1,14 +1,25 @@
 import Sidebar from "Components/Sidebar";
 import Card from "Components/Card";
 import React, { useState, useEffect } from 'react';
+import styled from "styled-components";
+
 
 const home = (width)=>{
     return (
         <div>
             <h1 style={{fontSize:'5em'}} >Hi!</h1>
             <h4> </h4>
-            {width > 800 ? <h4>Use the arrows on your keyboard or the controls on the sides </h4> : <h4>Use the controls on the sides</h4>}
-            <h4>to navigate through the site</h4>
+            {width > 800 ? <h4>Use the <AttentionSpan>ARROWS</AttentionSpan> on your <AttentionSpan>KEYBOARD</AttentionSpan> {<br />} 
+            or the <AttentionSpan>CONTROLS</AttentionSpan> on the <AttentionSpan>SIDES </AttentionSpan>{<br />}
+            to navigate through the site</h4> 
+            : 
+            <h4>Use the <AttentionSpan>CONTROLS</AttentionSpan> on the <AttentionSpan>SIDES </AttentionSpan> {<br />}to navigate through the site </h4>
+            }
+
+
+
+            
+            
         </div>
     )
 }
@@ -32,4 +43,8 @@ export default function Home(params) {
         )
 };
 
+const AttentionSpan = styled.span`
+    color: white;
+    font-weight: bold;
+`
 
