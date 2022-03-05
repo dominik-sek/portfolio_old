@@ -74,13 +74,14 @@ const StyledLink = styled(Link)`
     `
 
 const Title = styled.div`
-    opacity:0;
+    opacity:1;
+    font-size:1em;
     transition: opacity 0.3s ease-in-out;
-    font-size:1.75rem;
+    
 
-    @media (max-width: 850px) and (max-width: 1201px)  {
-        opacity:1;
-        font-size:1em;
+    @media (min-width: 768px)  {
+        font-size:1.75em;
+        opacity:0;
     }
 
     ${props => {
@@ -105,7 +106,7 @@ const ArrowWrapper = styled.div`
     margin:0.5%; 
     align-items:center;
 
-    @media (min-width: 1200px)  {
+    @media (min-width: 768px)  {
         width:100%;
         height:100%;
     }
@@ -128,10 +129,11 @@ const Body = styled.div`
                 return `
                 top:0;
                 width:100%;
-                flex-direction:column;
-                @media (max-width: 1200px) {
-                    flex-direction:column-reverse;
-                    justify-content:center;
+                flex-direction:column-reverse;
+                justify-content:center;
+
+                @media (min-width: 768px) {
+                    flex-direction:column;
                     }
 
 
@@ -140,10 +142,11 @@ const Body = styled.div`
                 return `
                 bottom:0;
                 width:100%;
-                flex-direction:column-reverse;
-                @media (max-width: 1200px) {
-                    flex-direction:column;
-                    justify-content:center;
+                flex-direction:column;
+                justify-content:center;
+
+                @media (min-width: 768px) {
+                    flex-direction:column-reverse;
                     }
 
 
@@ -152,24 +155,31 @@ const Body = styled.div`
                 return `
                 left:0;
                 height:100%;
-                
-                @media (max-width: 1200px) {
-                    flex-direction:row-reverse;
-                    justify-content:center;
-                    width:10%;
+                flex-direction:row-reverse;
+                justify-content:center;
+                width:10%;
+                @media (min-width: 768px) {
+                    flex-direction:row;
                     }
+
+                @media (min-width: 768px) and (min-width:966px){
+                    width:15%;
+                }
 
             `
             case 'right':
                 return `
                 right:0;
                 height:100%;
-                flex-direction:row-reverse;
-                @media (max-width: 1200px) {
-                    flex-direction:row;
+                flex-direction:row;
                     justify-content:center;
                     width:10%;
+                @media (min-width: 768px) {
+                    flex-direction:row-reverse;
                     }
+                @media (min-width: 768px) and (max-width:966px){
+                    width:15%;
+                }
 
             `
             default:
