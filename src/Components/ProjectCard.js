@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AiOutlineGithub, AiOutlineLink, AiOutlineCloseCircle } from "react-icons/ai";
+import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
 
 export default function ProjectCard(params) {
     return (
