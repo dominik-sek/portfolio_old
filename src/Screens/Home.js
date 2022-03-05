@@ -23,7 +23,7 @@ export default function Home(params) {
             <Card face={'left'}
             content={home(width)}
             >
-
+            
                 <Sidebar path={'/projects'} title={'Projects'} direction={'right'}/>
                 <Sidebar path={'/about'} title={'About me'} direction={'down'}/>
                 <Sidebar path={'/contact'} title={'Contact'} direction={'up'}/>

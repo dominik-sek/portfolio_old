@@ -1,17 +1,20 @@
 import styled from "styled-components";
-import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
+import { AiOutlineGithub, AiOutlineLink, AiOutlineCloseCircle } from "react-icons/ai";
+
 export default function ProjectCard(params) {
-    return(
+    return (
         <Body>
-                <Title>{params.project.title}</Title>
-        <Image src={params.project.img}></Image>
-        <Description>{params.project.desc}</Description>
-        <Links>
-            
-        <a href={params.project.github}> <StyledAiOutlineGithub/> </a>
-        {params.project.live==='' ? null :  <a href={params.project.live}> <StyledAiOutlineLink/> </a>}
-        </Links>
+            <Title>{params.project.title}</Title>
+            <Image src={params.project.img}></Image>
+            <Description>{params.project.desc}</Description>
+            <Links>
+
+                <a href={params.project.github}> <StyledAiOutlineGithub /> </a>
+                {params.project.live === '' ? <a style={{cursor:'not-allowed'}} href="#"><StyledAiOutlineLink/></a> : <a href={params.project.live}> <StyledAiOutlineLink /> </a>}
+            </Links>
         </Body>
+
+
     )
 };
 
@@ -31,9 +34,9 @@ const Body = styled.div`
     position:relative;
     display:flex;
     justify-content:center;
-    width:70%;
+    width:100%;
     height:100%;
-    min-height:30%;
+    min-height:60%;
     margin:5%;
     background: rgba( 255, 255, 255, 0.55 );
 
@@ -41,7 +44,7 @@ const Body = styled.div`
         height:20%;
         min-height:20%;
         margin:0.5%;
-        width:100%;
+        width:80%;
     }
     
 `
@@ -60,14 +63,18 @@ const Title = styled.div`
 
 `
 const Image = styled.img`
-    width:20%;
-    height:100%;
+
     position:absolute;
     left:0;
-    @media (max-width: 966px) {
-        width:100%;
-        height:100%;
-        opacity:0.4;
+    width:100%;
+    height:100%;
+    display:none;
+
+    @media (min-width: 966px) {
+    width:20%;
+    height:100%;
+    opacity:1;
+    display:flex;
     }
 
 `
@@ -85,7 +92,7 @@ const Description = styled.div`
     right:20%;
 `
 const Links = styled.div`
-    width:30%;
+    width:100%;
     height:100%;
     position:absolute;
     right:0;

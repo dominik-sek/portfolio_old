@@ -5,6 +5,7 @@ import About from 'Screens/About'
 import Contact from 'Screens/Contact'
 import Projects from 'Screens/Projects'
 import AnimatedBackground from 'Components/AnimatedBackground';
+import BadRoute from 'Screens/BadRoute';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/projects" element={<Projects />} />
-      <Route path="*" element={<div>oops</div>} />
+      <Route path="*" element={<BadRoute/>} />
     </Routes>
     </>
   );
