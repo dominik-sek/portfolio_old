@@ -10,7 +10,7 @@ export default function ProjectCard(params) {
             <Links>
 
                 <a href={params.project.github}> <StyledAiOutlineGithub /> </a>
-                {params.project.live === '' ? <a href="javascript:void(0);"><StyledAiOutlineLink /></a> : <a href={params.project.live}> <StyledAiOutlineLink /> </a>}
+                {params.project.live === '' ? <a href="javascript:void(0);" rel="noreferrer"><StyledAiOutlineLink /></a> : <a href={params.project.live}> <StyledAiOutlineLink /> </a>}
             </Links>
         </Body>
 
