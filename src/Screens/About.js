@@ -12,7 +12,7 @@ import { ReactComponent as Sass } from '../img/sass.svg';
 
 const about = () =>{
     return(
-        <section>
+        <section style={{fontWeight:400}}>
             <p>My name is Dominik, I am a third year student at </p>
             <a style={{color:'var(--secondary-color)'}} href="https://pwsztar.edu.pl/" target="_blank" rel="noreferrer">Academy of Science in Tarnow</a>
             <p>currently studying applied computer science.</p>

@@ -10,7 +10,7 @@ const projects = [
         'img': 'https://i.imgur.com/xeDpEwP.png',
         'github': 'https://github.com/gothic459/portfolio',
         'live': 'https://dsek.dev',
-        'tech': ['React', 'JS', 'Styled-components', 'HTML', 'CSS']
+        'tags': ['React', 'HTML','JS','CSS', 'Styled-components']
     },
     {
         'title': 'Blockchain miners simulator',
@@ -18,7 +18,7 @@ const projects = [
         'img': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRkknzfsNFw-5dZ00QFPK4ejjQO2xrOz6X7Q&usqp=CAU',
         'github': 'https://github.com/gothic459/blockchain-js-py',
         'live': '',
-        'tech': ['JS']
+        'tags': ['JS']
     },
     {
         'title': 'Movie database',
@@ -26,7 +26,7 @@ const projects = [
         'img': 'https://camo.githubusercontent.com/ae74715258ef203ba8f3e9f3e052122ece0b1379478d2063404c680e4f56b326/68747470733a2f2f696d6775722e636f6d2f5a4449417678672e706e67',
         'github': 'https://github.com/gothic459/movies-db',
         'live': '',
-        'tech': ['React', 'JS', 'Styled-components', 'HTML', 'CSS']
+        'tags': ['React', 'JS', 'Styled-components', 'HTML', 'CSS']
     },
     {
         'title': 'Online restaurant',
@@ -34,7 +34,7 @@ const projects = [
         'img': 'https://i.imgur.com/2Gp6tEB.png',
         'github': 'https://github.com/gothic459/online-restaurant',
         'live': 'https://pizzadev-front.herokuapp.com/',
-        'tech': ['React', 'JS', 'Styled-components', 'HTML', 'CSS']
+        'tags': ['React', 'JS', 'Styled-components', 'HTML', 'CSS']
     },
     {
         'title': 'Movie database 2',
@@ -42,7 +42,7 @@ const projects = [
         'img': 'https://i.imgur.com/2IVAhYY.png',
         'github': 'https://github.com/gothic459/movie-db',
         'live': '',
-        'tech': ['React', 'JS', 'Styled-components', 'HTML', 'CSS']
+        'tags': ['React', 'JS', 'Styled-components', 'HTML', 'CSS']
     }
 
 ]
