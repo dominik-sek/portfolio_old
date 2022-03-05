@@ -23,10 +23,10 @@ const about = () =>{
                 <li><Css/></li>
                 <li><Javascript/></li>
                 <li><Rjs/></li>
-                <li><MongoDB style={{width:'80%'}}/></li>
-                <li><PostgreSQL/></li>
                 <li><Sass/></li>
                 <li>💅</li> 
+                <li><MongoDB style={{width:'80%'}}/></li>
+                <li><PostgreSQL/></li>
             </Stack>
             <StyledHr/>
             <p>I love creating websites from scratch, seeing them go from an <span style={{color:'#fff'}}>idea</span> to a fully fledged website.</p>
