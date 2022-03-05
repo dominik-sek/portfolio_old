@@ -43,7 +43,7 @@ const Body = styled.div`
         height:20%;
         min-height:10%;
         margin:0.5%;
-        width:80%;
+        width:90%;
     }
     
 `

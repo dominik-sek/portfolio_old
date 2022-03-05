@@ -157,10 +157,14 @@ const Body = styled.div`
                 height:100%;
                 flex-direction:row-reverse;
                 justify-content:center;
-                width:15%;
+                width:10%;
                 @media (min-width: 768px) {
                     flex-direction:row;
                     }
+
+                @media (min-width: 768px) and (min-width:966px){
+                    width:15%;
+                }
 
             `
             case 'right':
@@ -169,10 +173,13 @@ const Body = styled.div`
                 height:100%;
                 flex-direction:row;
                     justify-content:center;
-                    width:15%;
+                    width:10%;
                 @media (min-width: 768px) {
                     flex-direction:row-reverse;
                     }
+                @media (min-width: 768px) and (max-width:966px){
+                    width:15%;
+                }
 
             `
             default:
