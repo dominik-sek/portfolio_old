@@ -78,7 +78,7 @@ const Title = styled.div`
     transition: opacity 0.3s ease-in-out;
     
 
-    @media (min-width: 768px)  {
+    @media (min-width: 966px)  {
         font-size:1.75em;
         opacity:0;
     }
@@ -105,7 +105,7 @@ const ArrowWrapper = styled.div`
     margin:0.5%; 
     align-items:center;
 
-    @media (min-width: 768px)  {
+    @media (min-width: 966px)  {
         width:100%;
         height:100%;
     }
@@ -131,7 +131,7 @@ const Body = styled.div`
                 flex-direction:column-reverse;
                 justify-content:center;
 
-                @media (min-width: 768px) {
+                @media (min-width: 966px) {
                     flex-direction:column;
                     }
 
@@ -144,7 +144,7 @@ const Body = styled.div`
                 flex-direction:column;
                 justify-content:center;
 
-                @media (min-width: 768px) {
+                @media (min-width: 966px) {
                     flex-direction:column-reverse;
                     }
 
@@ -157,7 +157,7 @@ const Body = styled.div`
                 flex-direction:row-reverse;
                 justify-content:center;
                 width:10%;
-                @media (min-width: 768px) {
+                @media (min-width: 966px) {
                     flex-direction:row;
                     }
 
@@ -173,7 +173,7 @@ const Body = styled.div`
                 flex-direction:row;
                     justify-content:center;
                     width:10%;
-                @media (min-width: 768px) {
+                @media (min-width: 966px) {
                     flex-direction:row-reverse;
                     }
                 @media (min-width: 768px) and (max-width:966px){
