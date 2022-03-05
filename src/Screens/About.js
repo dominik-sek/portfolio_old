@@ -14,7 +14,7 @@ const about = () =>{
     return(
         <section>
             <p>My name is Dominik, I am a third year student at </p>
-            <a style={{color:'var(--secondary-color)'}}href="https://pwsztar.edu.pl/">Academy of Science in Tarnow</a>
+            <a style={{color:'var(--secondary-color)'}} href="https://pwsztar.edu.pl/" target="_blank" rel="noreferrer">Academy of Science in Tarnow</a>
             <p>currently studying applied computer science.</p>
             <StyledHr/>
             <p>I am familiar with:</p>
