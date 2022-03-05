@@ -82,7 +82,7 @@ const Body = styled.div`
         left: 70%;
         width: 20px;
         height: 20px;
-        animation-duration: 20s;
+        animation-duration: 10s;
 
     }
 
@@ -120,21 +120,21 @@ const Body = styled.div`
         left: 50%;
         width: 25px;
         height: 25px;
-        animation-duration: 50s;
+        animation-duration: 12s;
     }
 
     & .squares li:nth-child(9){
         left: 20%;
         width: 15px;
         height: 15px;
-        animation-duration: 40s;
+        animation-duration: 5s;
     }
 
     & .squares li:nth-child(10){
         left: 85%;
         width: 150px;
         height: 150px;
-        animation-duration: 16s;
+        animation-duration: 25s;
     }
 
 }
