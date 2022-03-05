@@ -119,6 +119,7 @@ const Body = styled.div`
     &:hover ${Title}{
         opacity:1;
     }
+    font-weight:600;
     
     ${props => {
 

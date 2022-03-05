@@ -92,7 +92,7 @@ const StyledForm = styled.form`
     width: 100%;
     height: 100%;
     padding: 1em;
-    font-weight: bold;
+    font-weight: 400;
     text-align: center;
     border-radius: 5px;
     transition: all 0.3s ease-in-out;

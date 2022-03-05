@@ -4,6 +4,7 @@ import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
 export default function ProjectCard(params) {
     return (
         <Body>
+        
             <Title>{params.project.title}</Title>
             <Image src={params.project.img}></Image>
             <Description>{params.project.desc}</Description>
@@ -11,7 +12,19 @@ export default function ProjectCard(params) {
                 <a href={params.project.github} target="_blank" rel="noreferrer"> <StyledAiOutlineGithub /> </a>
                 {params.project.live === '' ? <NoLinkSpan><StyledAiOutlineLink showlink={"false"} /></NoLinkSpan> : <a href={params.project.live} target="_blank" rel="noreferrer"> <StyledAiOutlineLink showlink={"true"}/> </a>}
             </Links>
+            <Tags>
+            
+
+                {params.project.tags.map((tag, index) => {
+                    return (
+                        <Tag key={index}>{tag}</Tag>
+                    )
+                })}
+
+            </Tags>
+            
         </Body>
+        
 
 
     )
@@ -48,15 +61,14 @@ const Body = styled.div`
     background: rgba( 255, 255, 255, 0.55 );
 
     @media (min-width: 768px) {
-        height:20%;
-        min-height:20%;
-        margin:0.5%;
+        min-height:22.5%;
+        margin:3%;
         width:90%;
     }
     
 `
 const Title = styled.div`
-    height:15%;
+    height:10%;
     font-size:1em;
     padding:0.5%;
     width:60%;
@@ -68,6 +80,7 @@ const Title = styled.div`
     align-items:center;
     top:0;
     opacity:0.5;
+    font-weight:600;
     @media (min-width: 768px) {
         opacity:1;
     }
@@ -90,7 +103,7 @@ const Image = styled.img`
 
 `
 const Description = styled.div`
-    height:90%;
+    height:100%;
     width:60%;
     font-size:0.75em;
     margin-bottom:0 auto;
@@ -102,6 +115,7 @@ const Description = styled.div`
     left:20%;
     right:20%;
     opacity:0.5;
+    font-weight:400;
     @media (min-width: 768px) {
         opacity:1;
     }
@@ -137,5 +151,36 @@ const Links = styled.div`
             height:1.25em;
             width:1.25em;
         }
+    }
+`
+const Tags = styled.div`
+    display:none;
+
+    @media (min-width: 768px) {
+    width:60%;
+    left:20%;
+    flex-direction:row;
+    font-size:0.6em;
+    height:fit-content;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    bottom:0;
+    opacity:1;
+    font-weight:600;
+    }
+
+`
+const Tag = styled.span`
+    
+    padding:1%;
+    margin:0.5%;
+    background: var(--primary-color);
+    color:white;
+    border-radius:0.5em;
+    &:hover {
+        background: var(--secondary-color);
+        cursor:pointer;
     }
 `
