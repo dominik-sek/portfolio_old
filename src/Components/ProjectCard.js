@@ -9,7 +9,7 @@ export default function ProjectCard(params) {
             <Description>{params.project.desc}</Description>
             <Links>
                 <a href={params.project.github} target="_blank" rel="noreferrer"> <StyledAiOutlineGithub /> </a>
-                {params.project.live === '' ? <NoLinkSpan><StyledAiOutlineLink allowed={false} /></NoLinkSpan> : <a href={params.project.live} target="_blank" rel="noreferrer"> <StyledAiOutlineLink allowed={true}/> </a>}
+                {params.project.live === '' ? <NoLinkSpan><StyledAiOutlineLink showlink={"false"} /></NoLinkSpan> : <a href={params.project.live} target="_blank" rel="noreferrer"> <StyledAiOutlineLink showlink={"true"}/> </a>}
             </Links>
         </Body>
 
@@ -25,7 +25,7 @@ const StyledAiOutlineGithub = styled(AiOutlineGithub)`
 `;
 const StyledAiOutlineLink = styled(AiOutlineLink)`
     &:hover {
-        color:${props => props.allowed ? '#0077b5' : '#ccc'};
+        color:${props => props.showlink==="true" ? '#0077b5' : '#ccc'};
     }
 `;
 

@@ -18,6 +18,7 @@ const contact = ({setIsFormFocused}) => {
     )
 }
 
+
 export default function Contact(params) {
     const [showMessage, setShowMessage] = useState(false);
     const [isFormFocused, setIsFormFocused] = useState(false);
@@ -41,9 +42,9 @@ export default function Contact(params) {
     
     useEffect(()=>{
         window.addEventListener('keydown', handleKeyDown);
-
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
+
         }
     })
 
@@ -53,6 +54,7 @@ export default function Contact(params) {
                 setShowMessage(false);
             }, 1000);
         }
+
     }, [showMessage]);
 
 
