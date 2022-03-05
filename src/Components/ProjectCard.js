@@ -8,8 +8,8 @@ export default function ProjectCard(params) {
             <Image src={params.project.img}></Image>
             <Description>{params.project.desc}</Description>
             <Links>
-                <a href={params.project.github}> <StyledAiOutlineGithub /> </a>
-                {params.project.live === '' ? <a href="#" rel="noreferrer"><StyledAiOutlineLink /></a> : <a href={params.project.live}> <StyledAiOutlineLink /> </a>}
+                <a href={params.project.github} target="_blank" rel="noreferrer"> <StyledAiOutlineGithub /> </a>
+                {params.project.live === '' ? <NoLinkSpan><StyledAiOutlineLink /></NoLinkSpan> : <a href={params.project.live} target="_blank" rel="noreferrer"> <StyledAiOutlineLink /> </a>}
             </Links>
         </Body>
 
@@ -27,6 +27,14 @@ const StyledAiOutlineLink = styled(AiOutlineLink)`
     &:hover {
         color: #0077b5;
     }
+`;
+
+const NoLinkSpan = styled.span`
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100%;
+        cursor:not-allowed;
 `;
 
 const Body = styled.div`
@@ -59,6 +67,11 @@ const Title = styled.div`
     justify-content:center;
     align-items:center;
     top:0;
+    opacity:0.5;
+    @media (min-width: 768px) {
+        opacity:1;
+    }
+
 
 `
 const Image = styled.img`
@@ -67,8 +80,7 @@ const Image = styled.img`
     left:0;
     width:100%;
     height:100%;
-    opacity:0.3;
-
+    opacity:0.2;
     @media (min-width: 768px) {
     width:20%;
     height:100%;
@@ -89,6 +101,10 @@ const Description = styled.div`
     bottom:0;
     left:20%;
     right:20%;
+    opacity:0.5;
+    @media (min-width: 768px) {
+        opacity:1;
+    }
 `
 const Links = styled.div`
     width:100%;
@@ -100,7 +116,7 @@ const Links = styled.div`
     justify-content:center;
     align-items:center;
     & svg {
-            color:white;
+            color:black;
             height:2em;
             width:2em;
         }
@@ -109,6 +125,7 @@ const Links = styled.div`
         justify-content:center;
         align-items:center;
     }
+
     @media (min-width:768px){
         width:15%;
         & svg {
