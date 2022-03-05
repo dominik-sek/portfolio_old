@@ -62,7 +62,7 @@ const Body = styled.div`
 
     @media (min-width: 768px) {
         min-height:22.5%;
-        margin:3%;
+        margin:2%;
         width:90%;
     }
     
