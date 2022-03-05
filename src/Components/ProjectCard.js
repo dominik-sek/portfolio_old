@@ -9,7 +9,7 @@ export default function ProjectCard(params) {
             <Description>{params.project.desc}</Description>
             <Links>
                 <a href={params.project.github}> <StyledAiOutlineGithub /> </a>
-                {params.project.live === '' ? <a href="javascript:void(0);" rel="noreferrer"><StyledAiOutlineLink /></a> : <a href={params.project.live}> <StyledAiOutlineLink /> </a>}
+                {params.project.live === '' ? <a href="#" rel="noreferrer"><StyledAiOutlineLink /></a> : <a href={params.project.live}> <StyledAiOutlineLink /> </a>}
             </Links>
         </Body>
 

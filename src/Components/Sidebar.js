@@ -33,7 +33,6 @@ export default function Sidebar(params) {
     }
     }, [navigation, params.path, params.direction, location.pathname]);
 
-
     useEffect(() => {
         document.addEventListener("keydown", handleKeyDown);
         return () => {
