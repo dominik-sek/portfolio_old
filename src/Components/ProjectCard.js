@@ -8,9 +8,8 @@ export default function ProjectCard(params) {
             <Image src={params.project.img}></Image>
             <Description>{params.project.desc}</Description>
             <Links>
-
                 <a href={params.project.github}> <StyledAiOutlineGithub /> </a>
-                {params.project.live === '' ? <a href="javascript:void(0);"><StyledAiOutlineLink /></a> : <a href={params.project.live}> <StyledAiOutlineLink /> </a>}
+                {params.project.live === '' ? <a href="javascript:void(0);" rel="noreferrer"><StyledAiOutlineLink /></a> : <a href={params.project.live}> <StyledAiOutlineLink /> </a>}
             </Links>
         </Body>
 
@@ -36,13 +35,13 @@ const Body = styled.div`
     justify-content:center;
     width:100%;
     height:100%;
-    min-height:60%;
+    min-height:30%;
     margin:5%;
     background: rgba( 255, 255, 255, 0.55 );
 
     @media (min-width: 966px) {
         height:20%;
-        min-height:20%;
+        min-height:10%;
         margin:0.5%;
         width:80%;
     }
@@ -68,7 +67,7 @@ const Image = styled.img`
     left:0;
     width:100%;
     height:100%;
-    display:none;
+    opacity:0.3;
 
     @media (min-width: 966px) {
     width:20%;
@@ -100,6 +99,11 @@ const Links = styled.div`
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    & svg {
+            color:white;
+            height:3em;
+            width:3em;
+        }
     & a {
         display:flex;
         justify-content:center;
@@ -107,6 +111,10 @@ const Links = styled.div`
     }
     @media (min-width:966px){
         width:15%;
-
+        & svg {
+            color:black;
+            height:1.25em;
+            width:1.25em;
+        }
     }
 `
