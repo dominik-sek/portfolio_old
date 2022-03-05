@@ -36,9 +36,8 @@ export default function Card(params) {
 
 const CardBody = styled.div`
     position:absolute;
-    border-radius:5vmin;
-    width:80%;
-    height:90%;
+    width:100%;
+    height:100%;
     z-index:999;
     background: rgba( 255, 255, 255, 0.55 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -49,9 +48,11 @@ const CardBody = styled.div`
     align-items:center;
     flex-direction:column;
 
-    @media (max-width: 966px) {
+    @media (min-width: 966px) {
         width:80%;
-        height:80%;
+        height:90%;
+        border-radius:5vmin;
+
     }
 `
 const Container = styled.div` 

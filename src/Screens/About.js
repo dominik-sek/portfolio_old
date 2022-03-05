@@ -26,6 +26,7 @@ const about = () =>{
                 <li><MongoDB style={{width:'80%'}}/></li>
                 <li><PostgreSQL/></li>
                 <li><Sass/></li>
+                <li>💅</li> 
             </Stack>
             <StyledHr/>
             <p>I love creating websites from scratch, seeing them go from an <span style={{color:'#fff'}}>idea</span> to a fully fledged website.</p>
@@ -39,7 +40,6 @@ export default function About(params) {
             <Card face={'bottom'}
                 content={about()}
             >
-                {/* <img src={"https://cdn1.i-scmp.com/sites/default/files/styles/1200x800/public/images/methode/2017/04/06/0a2ae706-1a94-11e7-b4ed-ac719e54b474_1280x720_145124.jpg?itok=1PDxSxTA"}></img> */}
 
                 <Sidebar path={'/projects'} title={'Projects'} direction={'right'}/>
                 <Sidebar path={'/home'} title={'Home'} direction={'left'}/>
@@ -70,9 +70,8 @@ grid-template-rows:repeat(2,1fr);
         max-height:1.5em;
         min-width:1em;
         transition:all 0.3s ease-in-out;
-        border:1px solid white;
         &:hover{
-            background-color:var(--primary-color);
+            background-color:#E6E6EA;
             cursor:pointer;
         }
         & svg{
