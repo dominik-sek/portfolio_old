@@ -9,7 +9,6 @@ export default function Sidebar(params) {
     const location = useLocation();
     const handleKeyDown = useCallback((e) => {
         if(location.pathname !== '/contact'){
-            
         if (e.key === 'ArrowRight') {
             if(params.direction === 'right'){
                 navigation(params.path)
@@ -41,7 +40,6 @@ export default function Sidebar(params) {
     }, [handleKeyDown]);
 
 
-    //title should be also a link = new component
     const handleDirectionArrow = (direction, path) => {
         switch (direction) {
             case 'up':
