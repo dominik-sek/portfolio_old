@@ -15,18 +15,19 @@ const home = (width)=>{
             : 
             <h4>Use the <AttentionSpan>CONTROLS</AttentionSpan> on the <AttentionSpan>SIDES </AttentionSpan> {<br />}to navigate through the site </h4>
             }
-
-
-
-            
             
         </div>
     )
 }
 export default function Home(params) {
-    const [width, setWidth] = useState(window.innerWidth);
+    const [width, setWidth] = useState(0);
+
+    //doesnt remove the listener for some reason
     useEffect(() => {
         window.addEventListener('resize', () => setWidth(window.innerWidth));
+        return () => {
+            window.removeEventListener('resize', () => setWidth(window.innerWidth));
+        }
     }, []);
 
 

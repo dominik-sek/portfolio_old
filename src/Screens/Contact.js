@@ -3,12 +3,11 @@ import Sidebar from "Components/Sidebar";
 import Card from "Components/Card";
 import { useState, useEffect, useCallback } from "react";
 
-const contact = () => {
+const contact = ({setIsFormFocused}) => {
     return (
 
-        <StyledForm target="_blank" action="https://formsubmit.co/0f2d4c75d7d6f672c66393078f87fb39" method="POST" >
+        <StyledForm onFocus={()=>setIsFormFocused(true)} onBlur={()=>setIsFormFocused(false)} target="_blank" action="https://formsubmit.co/0f2d4c75d7d6f672c66393078f87fb39" method="POST" >
             <h1>Contact me</h1>
-
             <StyledInput type="text" name="name" placeholder="Your name" required />
             <StyledInput type="email" name="email" placeholder="Your email" required />
             <StyledTextArea name="message" placeholder="Your message" required></StyledTextArea>
@@ -19,11 +18,13 @@ const contact = () => {
     )
 }
 
+
 export default function Contact(params) {
     const [showMessage, setShowMessage] = useState(false);
+    const [isFormFocused, setIsFormFocused] = useState(false);
     
     const handleKeyDown = useCallback((e) => {
-            
+        
         if (e.key === 'ArrowRight') {
             setShowMessage(true);
         }
@@ -41,9 +42,9 @@ export default function Contact(params) {
     
     useEffect(()=>{
         window.addEventListener('keydown', handleKeyDown);
-
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
+
         }
     })
 
@@ -53,14 +54,15 @@ export default function Contact(params) {
                 setShowMessage(false);
             }, 1000);
         }
+
     }, [showMessage]);
 
 
     return (
         <Card face={'up'}
-            content={contact()}>
+            content={contact({setIsFormFocused})}>
 
-            <NoArrowMessage usedArrow={showMessage}>You can't use arrow controls on this page</NoArrowMessage>
+            <NoArrowMessage isFormFocused={isFormFocused} usedArrow={showMessage}>You can't use arrow controls on this page</NoArrowMessage>
             <Sidebar path={'/projects'} title={'Projects'} direction={'right'} />
             <Sidebar path={'/about'} title={'About me'} direction={'down'} />
             <Sidebar path={'/home'} title={'Home'} direction={'left'} />
@@ -70,6 +72,8 @@ export default function Contact(params) {
 };
 
 const NoArrowMessage = styled.h4`
+    display:${props => props.isFormFocused ? 'none' : 'block'};
+
     position: absolute;
     top:0;
     left:0;
