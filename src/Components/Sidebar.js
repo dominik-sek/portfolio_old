@@ -8,7 +8,7 @@ export default function Sidebar(params) {
     const navigation = useNavigate();
     const location = useLocation();
     const handleKeyDown = useCallback((e) => {
-        if(location.pathname !== '/contact'){
+    if(location.pathname !== '/contact'){
         if (e.key === 'ArrowRight') {
             if(params.direction === 'right'){
                 navigation(params.path)
@@ -30,6 +30,7 @@ export default function Sidebar(params) {
             }
         }
     }
+    
     }, [navigation, params.path, params.direction, location.pathname]);
 
     useEffect(() => {

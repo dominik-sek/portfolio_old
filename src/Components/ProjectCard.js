@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
 export default function ProjectCard(params) {
-
+    console.log(params)
     return (
-        <Body>
+        <Body delay={params.delay}>
         
             <Title>{params.project.title}</Title>
             <Image src={params.project.img}></Image>
@@ -32,6 +32,7 @@ export default function ProjectCard(params) {
 
     )
 };
+
 
 const StyledAiOutlineGithub = styled(AiOutlineGithub)`
     &:hover {
@@ -62,7 +63,7 @@ const Body = styled.div`
     min-height:30%;
     margin:5%;
     background: rgba( 255, 255, 255, 0.55 );
-
+    
     @media (min-width: 768px) {
         min-height:22.5%;
         margin:2%;
