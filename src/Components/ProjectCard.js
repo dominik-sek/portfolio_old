@@ -181,11 +181,11 @@ const Tag = styled.span`
     padding-top:0;
     padding-bottom:0;
     margin:0.5%;
-    background:var(--quaternary-color);
+    background:var(--primary-color);
     color:white;
     border-radius:0.5em;
     &:hover {
-        background: var(--primary-color);
+        background: var(--secondary-color);
         cursor:pointer;
     }
 `
