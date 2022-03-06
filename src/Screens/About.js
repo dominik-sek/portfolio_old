@@ -8,6 +8,7 @@ import { ReactComponent as MongoDB } from '../img/mongodb.svg';
 import { ReactComponent as Rjs } from '../img/react.svg';
 import { ReactComponent as PostgreSQL } from '../img/postgresql.svg';
 import { ReactComponent as Sass } from '../img/sass.svg';
+import { AiOutlineGithub } from "react-icons/ai";
 
 
 const about = () =>{
@@ -30,7 +31,11 @@ const about = () =>{
             </StyledUl>
             <StyledHr/>
             <p>I love creating websites from scratch, seeing them go from an <span style={{color:'#fff'}}>idea</span> to a fully fledged website.</p>
-            
+            <StyledHr/>
+            <Links>
+            <a href="https://github.com/gothic459"><AiOutlineGithub /></a>
+            </Links>
+
         </section>
 
     )
@@ -48,6 +53,26 @@ export default function About(params) {
             </Card>
         )
 };
+
+const Links = styled.div`
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-top:1rem;
+    height:3rem;
+    margin-bottom:1rem;
+    & svg {
+            color:black;
+            height:2em;
+            width:2em;
+            transition: transform 0.2s ease-in-out;
+            &:hover {
+                transform:scale(1.5);
+            }
+        }
+`;
+
 
 const StyledUl = styled.ul`
 display:grid;
