@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
-
 export default function ProjectCard(params) {
+
     return (
         <Body>
         
@@ -9,8 +9,11 @@ export default function ProjectCard(params) {
             <Image src={params.project.img}></Image>
             <Description>{params.project.desc}</Description>
             <Links>
-                <a href={params.project.github} target="_blank" rel="noreferrer"> <StyledAiOutlineGithub /> </a>
-                {params.project.live === '' ? <NoLinkSpan><StyledAiOutlineLink showlink={"false"} /></NoLinkSpan> : <a href={params.project.live} target="_blank" rel="noreferrer"> <StyledAiOutlineLink showlink={"true"}/> </a>}
+                <a href={params.project.github} target="_blank" rel="noreferrer"> 
+                <StyledAiOutlineGithub/> 
+                </a>
+
+                {params.project.live === '' ? <NoLinkSpan ><StyledAiOutlineLink showlink={"false"} /></NoLinkSpan> : <a href={params.project.live} target="_blank" rel="noreferrer"> <StyledAiOutlineLink showlink={"true"}/> </a>}
             </Links>
             <Tags>
             
@@ -175,12 +178,14 @@ const Tags = styled.div`
 const Tag = styled.span`
     
     padding:1%;
+    padding-top:0;
+    padding-bottom:0;
     margin:0.5%;
-    background: var(--primary-color);
+    background:var(--quaternary-color);
     color:white;
     border-radius:0.5em;
     &:hover {
-        background: var(--secondary-color);
+        background: var(--primary-color);
         cursor:pointer;
     }
 `
