@@ -1,4 +1,3 @@
-import { AnimatePresence } from "framer-motion";
 import styled from "styled-components"
 import ProjectCard from "./ProjectCard";
 
@@ -7,9 +6,7 @@ const ListContent = (content) => {
         <ContentAsList>
             {content.map((item, index) => {
                 return (
-                    <AnimatePresence key={index}>
                         <ProjectCard project={item} />
-                    </AnimatePresence>
                 )
             }
             )}

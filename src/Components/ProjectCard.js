@@ -178,6 +178,8 @@ const Tags = styled.div`
 const Tag = styled.span`
     
     padding:1%;
+    padding-top:0;
+    padding-bottom:0;
     margin:0.5%;
     background:var(--quaternary-color);
     color:white;
