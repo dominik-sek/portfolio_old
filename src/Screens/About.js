@@ -24,7 +24,6 @@ const about = () =>{
                 <li><Css/></li>
                 <li><Javascript/></li>
                 <li><Rjs/></li>
-                <li><Sass/></li>
                 <li>💅</li> 
                 <li><MongoDB style={{width:'80%'}}/></li>
                 <li><PostgreSQL/></li>
