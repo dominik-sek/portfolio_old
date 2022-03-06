@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
 export default function ProjectCard(params) {
-    console.log(params)
     return (
         <Body delay={params.delay}>
         
@@ -68,6 +67,7 @@ const Body = styled.div`
         min-height:22.5%;
         margin:2%;
         width:90%;
+        border-radius:1vmin;
     }
     
 `
@@ -98,11 +98,14 @@ const Image = styled.img`
     width:100%;
     height:100%;
     opacity:0.2;
+    
     @media (min-width: 768px) {
-    width:20%;
-    height:100%;
-    opacity:1;
-    display:flex;
+        width:20%;
+        height:100%;
+        opacity:1;
+        display:flex;
+        border-top-left-radius:1vmin;
+        border-bottom-left-radius:1vmin;
     }
 
 `

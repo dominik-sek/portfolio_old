@@ -8,7 +8,7 @@ const ListContent = (content) => {
             {content.map((item, index) => {
                 
                 return (
-                        <ProjectCard project={item} delay={index * 0.1} />
+                        <ProjectCard key={index} project={item} delay={index * 0.1} />
                 )
             }
             )}

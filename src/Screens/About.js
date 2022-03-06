@@ -33,7 +33,7 @@ const about = () =>{
             <p>I love creating websites from scratch, seeing them go from an <span style={{color:'#fff'}}>idea</span> to a fully fledged website.</p>
             <StyledHr/>
             <Links>
-            <a href="https://github.com/gothic459" target="_blank" rel="noreferrer"><AiOutlineGithub /></a>
+            <a href="https://github.com/gothic459" target="_blank" rel="noreferrer" style={{}}><AiOutlineGithub /></a>
             </Links>
 
         </section>
@@ -68,8 +68,14 @@ const Links = styled.div`
             transition: transform 0.2s ease-in-out;
             &:hover {
                 transform:scale(1.5);
+                color:var(--primary-color);
             }
         }
+    & a {
+        margin-top:0.5rem;
+        width:0;
+    }
+
 `;
 
 
