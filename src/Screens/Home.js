@@ -31,7 +31,7 @@ export default function Home(params) {
 
 
     return (
-            <Card face={'left'}
+            <Card position={'left'}
             content={home(width)}
             >
             

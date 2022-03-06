@@ -7,22 +7,24 @@ const contact = ({setIsFormFocused}) => {
     return (
 
         <StyledForm onFocus={()=>setIsFormFocused(true)} onBlur={()=>setIsFormFocused(false)} target="_blank" action="https://formsubmit.co/0f2d4c75d7d6f672c66393078f87fb39" method="POST" >
+            
             <h1>Contact me</h1>
             <StyledInput type="text" name="name" placeholder="Your name" required />
             <StyledInput type="email" name="email" placeholder="Your email" required />
             <StyledTextArea name="message" placeholder="Your message" required></StyledTextArea>
             <input type="hidden" name="_template" value="table"/>
-            <StyledButton type="submit" >Send</StyledButton>
-
+            <ButtonWrapper>
+                <StyledButton type="submit" >Send</StyledButton>
+                <StyledButton type="reset" >Clear</StyledButton>
+            </ButtonWrapper>
         </StyledForm>
     )
 }
 
-
 export default function Contact(params) {
-    const [showMessage, setShowMessage] = useState(false);
     const [isFormFocused, setIsFormFocused] = useState(false);
-    
+    const [showMessage, setShowMessage] = useState(false);
+
     const handleKeyDown = useCallback((e) => {
         
         if (e.key === 'ArrowRight') {
@@ -59,7 +61,7 @@ export default function Contact(params) {
 
 
     return (
-        <Card face={'up'}
+        <Card position={'up'}
             content={contact({setIsFormFocused})}>
 
             <NoArrowMessage isFormFocused={isFormFocused} usedArrow={showMessage}>You can't use arrow controls on this page</NoArrowMessage>
@@ -70,10 +72,8 @@ export default function Contact(params) {
         </Card>
     )
 };
-
 const NoArrowMessage = styled.h4`
     display:${props => props.isFormFocused ? 'none' : 'block'};
-
     position: absolute;
     top:0;
     left:0;
@@ -82,7 +82,6 @@ const NoArrowMessage = styled.h4`
     color: #fff;
     opacity:${props => props.usedArrow ? '1' :'0'};
     transition: opacity 0.5s;
-
 `
 const StyledForm = styled.form`
     display: flex;
@@ -138,22 +137,30 @@ const StyledTextArea = styled.textarea`
     } 
 
     @media(min-width: 768px){
-        width: 40%;
+        width: 50%;
         height: 30%;
     }
 `;
+const ButtonWrapper = styled.div`
+    width: 100%;
+    height: 10%;
+    padding: 0.5em;
+    margin: 0.5em;
+    display:flex;
+    justify-content:center;
+`;
+
 const StyledButton = styled.button`
 
-    width: 60%;
-    height: 10%;
     border: none;
     border-radius: 1em;
     padding: 0.5em;
     margin: 0.5em;
+    width: 30%;
     transition: all 0.3s ease-in-out;
     &:hover{
         cursor:pointer;
-        background-color:var(--primary-color);
+        background-color:${params => params.type === 'submit' ? 'var(--primary-color)' : 'red'};
     }
     &:focus{
         outline:none;

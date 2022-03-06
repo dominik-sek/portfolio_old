@@ -33,7 +33,7 @@ const about = () =>{
             <p>I love creating websites from scratch, seeing them go from an <span style={{color:'#fff'}}>idea</span> to a fully fledged website.</p>
             <StyledHr/>
             <Links>
-            <a href="https://github.com/gothic459"><AiOutlineGithub /></a>
+            <a href="https://github.com/gothic459" target="_blank" rel="noreferrer"><AiOutlineGithub /></a>
             </Links>
 
         </section>
@@ -42,10 +42,9 @@ const about = () =>{
 }
 export default function About(params) {
     return (
-            <Card face={'bottom'}
-                content={about()}
-            >
-
+            <Card position={'bottom'}
+                content={about()}>
+                
                 <Sidebar path={'/projects'} title={'Projects'} direction={'right'}/>
                 <Sidebar path={'/home'} title={'Home'} direction={'left'}/>
                 <Sidebar path={'/contact'} title={'Contact'} direction={'up'}/>

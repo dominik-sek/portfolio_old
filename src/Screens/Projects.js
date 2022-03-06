@@ -1,7 +1,6 @@
 import Sidebar from "Components/Sidebar";
 import Card from "Components/Card"
-//this to db
-// v
+
 const projects = [
 
     {
@@ -14,7 +13,7 @@ const projects = [
     },
     {
         'title': 'Blockchain miners simulator',
-        'desc': 'Blockchain + proof of work simulator written in javascript',
+        'desc': 'A command-line Blockchain + proof of work simulator written in vanilla javascript ',
         'img': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRkknzfsNFw-5dZ00QFPK4ejjQO2xrOz6X7Q&usqp=CAU',
         'github': 'https://github.com/gothic459/blockchain-js-py',
         'live': '',
@@ -48,7 +47,7 @@ const projects = [
 ]
 export default function Projects(params) {
     return (
-        <Card face={'top'} contentType={'list'} content={projects}>
+        <Card position={"right"} contentType={'list'} content={projects}>
 
             <Sidebar path={'/about'} title={'About me'} direction={'down'} />
             <Sidebar path={'/home'} title={'Home'} direction={'left'} />

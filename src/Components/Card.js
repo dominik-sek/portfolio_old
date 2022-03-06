@@ -1,18 +1,21 @@
-import styled from "styled-components"
+import styled from "styled-components";
+
 import ProjectCard from "./ProjectCard";
 
 const ListContent = (content) => { 
     return(
         <ContentAsList>
             {content.map((item, index) => {
+                
                 return (
-                        <ProjectCard project={item} />
+                        <ProjectCard project={item} delay={index * 0.1} />
                 )
             }
             )}
         </ContentAsList>
     )
 }
+
 
 const TextContent = (content) => {
     return (
@@ -23,7 +26,7 @@ const TextContent = (content) => {
 export default function Card(params) {
     return (
         <Container>
-            <CardBody face={params.face}>
+            <CardBody position={params.position}>
                 {params.children}
             {params.contentType === 'list' ? ListContent(params.content) : TextContent(params.content)}
             </CardBody>
@@ -49,7 +52,6 @@ const CardBody = styled.div`
         width:80%;
         height:90%;
         border-radius:5vmin;
-
     }
     
 `
@@ -71,10 +73,13 @@ const Content = styled.div`
     justify-content:center;
     align-items:center;
     text-align:center;
-    font-size:1.2em;
+    font-size:1.1em;
     
-    @media (min-width: 966px) {
-        font-size:1.25em;
+    @media (min-width: 1300px) {
+        font-size:1.2em;
+    }
+    @media (max-width: 475px){
+        font-size:1.3em;
     }
 
 `
@@ -86,7 +91,4 @@ const ContentAsList = styled(Content)`
     &::-webkit-scrollbar {
         display: none;
     }
-
-
 `
-
