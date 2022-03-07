@@ -7,16 +7,16 @@ import { ReactComponent as Javascript } from '../img/javascript.svg';
 import { ReactComponent as MongoDB } from '../img/mongodb.svg';
 import { ReactComponent as Rjs } from '../img/react.svg';
 import { ReactComponent as PostgreSQL } from '../img/postgresql.svg';
-import { ReactComponent as Sass } from '../img/sass.svg';
+// import { ReactComponent as Sass } from '../img/sass.svg';
 import { AiOutlineGithub } from "react-icons/ai";
 
 
 const about = () =>{
     return(
         <section style={{fontWeight:400}}>
-            <p>My name is Dominik, I am a third year student at </p>
-            <a style={{color:'var(--secondary-color)'}} href="https://pwsztar.edu.pl/" target="_blank" rel="noreferrer">Academy of Science in Tarnow</a>
-            <p>currently studying applied computer science.</p>
+            <p>My name is Dominik, I am a third-year student at </p>
+            <a style={{color:'var(--secondary-color)'}} href="https://international.pwsztar.edu.pl/" target="_blank" rel="noreferrer">Academy of Applied Sciences in Tarnow</a>
+            <p>currently studying <span style={{color:'#fff'}}>applied computer science</span></p>
             <StyledHr/>
             <p>I am familiar with:</p>
             <StyledUl>
@@ -24,6 +24,7 @@ const about = () =>{
                 <li><Css/></li>
                 <li><Javascript/></li>
                 <li><Rjs/></li>
+                {/* <li><Sass/></li> */}
                 <li>💅</li> 
                 <li><MongoDB style={{width:'80%'}}/></li>
                 <li><PostgreSQL/></li>
@@ -72,7 +73,7 @@ const Links = styled.div`
         }
     & a {
         margin-top:0.5rem;
-        width:0;
+        width:fit-content;
     }
 
 `;
