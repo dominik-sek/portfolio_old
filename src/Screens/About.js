@@ -14,7 +14,7 @@ import { AiOutlineGithub } from "react-icons/ai";
 const about = () =>{
     return(
         <section style={{fontWeight:400}}>
-            <p>My name is Dominik, I am a third-year student at </p>
+            <p>My name is Dominik Sęk, I am a third-year student at </p>
             <a style={{color:'var(--secondary-color)'}} href="https://international.pwsztar.edu.pl/" target="_blank" rel="noreferrer">Academy of Applied Sciences in Tarnow</a>
             <p>currently studying <span style={{color:'#fff'}}>applied computer science</span></p>
             <StyledHr/>
