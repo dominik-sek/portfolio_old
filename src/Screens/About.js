@@ -13,7 +13,7 @@ import { AiOutlineGithub } from "react-icons/ai";
 
 const about = () =>{
     return(
-        <section style={{fontWeight:400}}>
+        <AboutContent>
             <p>My name is Dominik Sęk, I am a third-year student at </p>
             <a style={{color:'var(--secondary-color)'}} href="https://international.pwsztar.edu.pl/" target="_blank" rel="noreferrer">Academy of Applied Sciences in Tarnow</a>
             <p>currently studying <span style={{color:'#fff'}}>applied computer science</span></p>
@@ -36,7 +36,7 @@ const about = () =>{
             <a href="https://github.com/gothic459" target="_blank" rel="noreferrer" style={{}}><AiOutlineGithub /></a>
             </Links>
 
-        </section>
+        </AboutContent>
 
     )
 }
@@ -52,6 +52,12 @@ export default function About(params) {
             </Card>
         )
 };
+
+const AboutContent = styled.section`
+    font-weight:400;
+    width:100%;
+    height:100%;
+`
 
 const Links = styled.div`
     display:flex;
