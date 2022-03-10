@@ -73,8 +73,7 @@ const Content = styled.div`
     justify-content:center;
     align-items:center;
     text-align:center;
-    font-size:1.1em;
-    
+    font-size:1em;
     @media (min-width: 1300px) {
         font-size:1.2em;
     }
