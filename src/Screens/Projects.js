@@ -12,6 +12,14 @@ const projects = [
         'tags': ['React', 'HTML','JS','CSS', 'React Router','Styled-components']
     },
     {
+        'title': 'FRB Creative',
+        'desc': 'A local business’ website - I was responsible for the design and development of the website',
+        'img': 'https://i.imgur.com/uq45Osk.png',
+        'github': 'https://github.com/gothic459/frb-creative',
+        'live':'https://frb-creative.netlify.app/',
+        'tags': ['HTML','JS','CSS', 'React','Styled-components','Figma']
+    },
+    {
         'title': 'Blockchain miners simulator',
         'desc': 'A command-line Blockchain + proof of work simulator written in vanilla javascript ',
         'img': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRkknzfsNFw-5dZ00QFPK4ejjQO2xrOz6X7Q&usqp=CAU',

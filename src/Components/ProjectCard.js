@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
 export default function ProjectCard(params) {
     return (
@@ -32,7 +32,6 @@ export default function ProjectCard(params) {
     )
 };
 
-
 const StyledAiOutlineGithub = styled(AiOutlineGithub)`
     &:hover {
         color: #0077b5;
@@ -62,6 +61,7 @@ const Body = styled.div`
     min-height:30%;
     margin:5%;
     background: rgba( 255, 255, 255, 0.55 );
+
     
     @media (min-width: 768px) {
         min-height:22.5%;
@@ -69,6 +69,7 @@ const Body = styled.div`
         width:90%;
         border-radius:1vmin;
     }
+
     
 `
 const Title = styled.div`
