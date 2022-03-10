@@ -14,7 +14,7 @@ const projects = [
     {
         'title': 'FRB Creative',
         'desc': 'A local business’ website - I was responsible for the design and development of the website',
-        'img': 'https://i.imgur.com/uq45Osk.png',
+        'img': 'https://i.imgur.com/Btlw7yS.png',
         'github': 'https://github.com/gothic459/frb-creative',
         'live':'https://frb-creative.netlify.app/',
         'tags': ['HTML','JS','CSS', 'React','Styled-components','Figma']

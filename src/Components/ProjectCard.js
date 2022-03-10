@@ -33,7 +33,6 @@ export default function ProjectCard(params) {
 };
 
 
-
 const StyledAiOutlineGithub = styled(AiOutlineGithub)`
     &:hover {
         color: #0077b5;
