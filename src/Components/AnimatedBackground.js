@@ -62,7 +62,7 @@ const Body = styled.div`
         background: rgba(255, 255, 255, 0.6);
         animation: ${flowUpwards} 10s linear infinite;
         bottom: -30%;
-        border-radius:15%;
+        border-radius:5%;
     }
 
     & .squares li:nth-child(1){
