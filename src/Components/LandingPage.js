@@ -1,41 +1,48 @@
 
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Wave from '../img/wave.svg'
-import AnimatedBackground from './AnimatedBackground';
+import ButtonWave from '../img/wave-bottom.svg'
+
+const waveAnimation = keyframes`
+    from{
+        background-position: 0% 0%;
+    }
+    to{
+        background: 100% 0%;
+    }
+
+`
 const LandingPage = (props) => {
-    return ( 
+    return (
         <Body id={props.id} className='landing'>
-            
+
 
             <section className='landing-content'>
                 <div className='left-intro'>
-                    <h1>Hi, my name is Dominik<br/>
-                        I am a front end developer<br/>
+                    <h1>Hi, my name is Dominik<br />
+                        I am a front end developer<br />
                         based in Poland</h1>
 
-                <div className='buttons'>
+                    <div className='buttons'>
 
-                    <ul>
-                        <li><a href="#projects">my projects</a></li>
-                        <li><a href="#about">about me</a></li>
-                    </ul>
+                        <ul >
+                            <li><a href="#projects">my projects</a></li>
+                            <li><a href="#about">about me</a></li>
+                        </ul>
+
+                    </div>
 
                 </div>
-                        
-                </div>
 
-
-                <div className='right-intro'>
-                </div>
             </section>
 
-        <footer>
-            <img src={Wave} />
-        </footer>
+            <footer>
+                <img src={Wave} />
+            </footer>
         </Body>
     );
 }
- 
+
 const Body = styled.main`
     height: calc(100vh - 4rem);
     display: flex;
@@ -79,11 +86,35 @@ const Body = styled.main`
                     justify-content: center;
                     align-items: center;
                     background:#fff;
-                    
+                    position: relative;
+                    z-index:1;
+                    &::after{
+                        content:'';
+                        opacity: 0;
+                        width: 50%;
+                        height: 50%;
+                        bottom:50;
+                        left: 50;
+                        background:gray;
+                        z-index: -1;
+                        position:absolute;
+                        transition: all 0.2s ease-in-out;
+                    }
+
+
+                    &:hover{
+                        &::after{
+                            opacity: 1;
+                            height:100%;
+                            width:100%;
+                        }
+                    }
                         &> a{
                         text-decoration: none;
                         color:black;
-                            }
+                        }
+
+
                     }   
                 & li+li{
                     margin-left:5%;

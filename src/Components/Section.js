@@ -25,6 +25,7 @@ const Body = styled.section`
     padding:0 10rem 0 10rem;
     background: white;
     scroll-margin:4rem;
+    border:1px solid red;
     & * {
         color:black;
     }
@@ -48,7 +49,6 @@ const Body = styled.section`
     & div>div{
         display: flex;
         width:50%;
-        border:1px solid green;
     }
     
 `

@@ -14,6 +14,7 @@ import TSico from '../img/ts.svg'
 import MDBico from '../img/mdb.svg'
 import EXico from '../img/express.svg'
 import FIGMAico from '../img/figma.svg'
+import SASSico from '../img/sass.svg'
 
 
 const AboutSection = () => {
@@ -51,6 +52,7 @@ const AboutSection = () => {
                     <li><img src={MDBico}/></li>
                     <li><img src={EXico}/></li>
                     <li><img src={FIGMAico}/></li>
+                    <li><img src={SASSico}/></li>
 
                 </ul>
             </div>

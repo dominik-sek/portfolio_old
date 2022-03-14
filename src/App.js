@@ -7,6 +7,7 @@ import AboutSection from 'Pages/AboutSection';
 import ProjectsSection from 'Pages/ProjectsSection';
 import ContactSection from 'Pages/ContactSection';
 import AnimatedBackground from 'Components/AnimatedBackground';
+import { device } from 'device';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
       <LandingPage id="home"/>
 
       <AboutSection />
-      <ProjectsSection />
+      {/* <ProjectsSection /> */}
       <ContactSection />
 
     </Wrapper>

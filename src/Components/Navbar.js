@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import {AiFillGithub} from 'react-icons/ai'
 import React, { useState, useEffect } from 'react';
+import {GiHamburgerMenu} from 'react-icons/gi'
+import { device } from 'device';
 
 const Navbar = () => {
     const [active, setActive] = useState([false, false, false, false, false]);
-
+    const [openDrawer, setOpenDrawer] = useState(false);
     const toggleActive = (index) => {
         let newActive = [false, false, false, false, false];
         newActive[index] = true;
@@ -45,7 +47,6 @@ const Navbar = () => {
           
         })}, []);
 
-
     const scrollToTop = () =>{
         document.documentElement.scrollTo({
             top:0,
@@ -55,34 +56,40 @@ const Navbar = () => {
 
     return(
         <Body>
-            <ul>
-            <li>Dominik Sęk</li>
+            <ul className='desktop'>
+                <li>Dominik Sęk</li>
                 <li><a className={active[0] ? 'active' : 'inactive'} onClick={scrollToTop} href="#home">home</a></li>
                 <li><a className={active[1] ? 'active' : 'inactive'} href="#about">about</a></li>
                 <li><a className={active[2] ? 'active' : 'inactive'} href="#projects">projects</a></li>
                 <li><a className={active[3] ? 'active' : 'inactive'} href="#contact">contact</a></li>
                 <li className='social-link'><a target="_blank" rel="noreferrer" href="https://github.com/gothic459"><AiFillGithub/></a></li>
             </ul>
+            
         </Body>
     )
 }
 
 const Body = styled.nav`
-    background-color: var(--clr-primary);
-    height:4rem;
-    position: sticky;
-    top:0;
-    z-index:2;
 
-    display: flex;
-    align-items: center;
+@media ${device.tablet}
+    {
+        background-color: var(--clr-primary);
+        height:4rem;
+        position: sticky;
+        top:0;
+        z-index:2;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 
-    
+    &ul.mobile{
+        display: none;
+    }
+
     ul{
         display: flex;
         justify-content: flex-end;
         width:100%;
-        
         & > li{
         color:white;
         height:3rem;
@@ -91,7 +98,7 @@ const Body = styled.nav`
         display: flex;
         align-items: center;
         position: relative;
-        
+
             &.social-link{
                 transform: scale(1.5);
                 transition: all 0.3s ease-in-out;
@@ -143,16 +150,14 @@ const Body = styled.nav`
             & .active{
                 box-shadow:0px 1px 0px white;
             }
-
-            
         }
 
     }
-
-    @media (min-width: 768px){
-        /* padding-top: 5rem; */
     }
 
 `
+
+
+
 
 export default Navbar;
