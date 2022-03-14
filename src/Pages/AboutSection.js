@@ -1,6 +1,21 @@
 import Section from "Components/Section";
 import './sections.css';
-import HtmlIco from '../img/html5.svg'
+
+
+import HTMLico from '../img/html5.svg';
+import CSSico from '../img/css3.svg';
+import JSico from '../img/javascript.svg';
+import REACTico from '../img/react.svg';
+import PGico from '../img/postgresql.svg';
+import STYLEDico from '../img/styled.svg';
+import GITico from '../img/git.svg'
+
+import TSico from '../img/ts.svg'
+import MDBico from '../img/mdb.svg'
+import EXico from '../img/express.svg'
+import FIGMAico from '../img/figma.svg'
+
+
 const AboutSection = () => {
     return (
         <Section id="about" title="about me">
@@ -12,28 +27,30 @@ const AboutSection = () => {
         </div>
 
         <div className='right-side'>
-        I'm familiar with:
+        <h2>I'm familiar with:</h2>
             <div className="familiar">
 
                 <ul >
-                    <li>html5</li>
-                    <li>css3</li>
-                    <li>js</li>
+                    <li><img src={HTMLico}/></li>
+                    <li><img src={CSSico}/></li>
+                    <li><img src={JSico}/></li>
 
-                    <li>React</li>
-                    <li>Postgres</li>
-                    <li>Styled components</li>
+                    <li><img src={REACTico}/></li>
+                    <li><img src={PGico}/></li>
+                    <li><img src={STYLEDico}/></li>
+                    <li><img src={GITico}/></li>
+
                 </ul>
 
             </div>
-        Currently learning:
+            <h2>Currently learning:</h2>
             <div className="learning">
                 
             <ul >
-                    <li>typescript</li>
-                    <li>mongo</li>
-                    <li>express</li>
-                    <li>figma</li>
+                    <li><img src={TSico}/></li>
+                    <li><img src={MDBico}/></li>
+                    <li><img src={EXico}/></li>
+                    <li><img src={FIGMAico}/></li>
 
                 </ul>
             </div>

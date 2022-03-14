@@ -3,12 +3,8 @@ import './sections.css';
 const ProjectsSection = () => {
     return (
         <Section id="projects" title="some of my projects">
-        <div className='left-side'>
+        <div className='middle'>
             my projects
-        </div>
-
-        <div className='right-side'>
-
         </div>
       </Section>
       );

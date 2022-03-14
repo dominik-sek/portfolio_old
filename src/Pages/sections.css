@@ -18,7 +18,7 @@
           align-items: center;
 }
 
-#about .right-side * {
+#about .right-side div, #about .right-side ul {
   width: 100%;
   height: 100%;
 }
@@ -29,8 +29,8 @@
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
 }
 
 #about .right-side .familiar ul li,
@@ -44,6 +44,19 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  vertical-align: top;
+}
+
+#about .right-side .familiar ul li :hover,
+#about .right-side .learning ul li :hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+#about .right-side .familiar ul li img,
+#about .right-side .learning ul li img {
+  max-width: 33%;
+  max-height: 33%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 /*# sourceMappingURL=sections.css.map */

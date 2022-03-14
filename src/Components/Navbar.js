@@ -61,7 +61,7 @@ const Navbar = () => {
                 <li><a className={active[1] ? 'active' : 'inactive'} href="#about">about</a></li>
                 <li><a className={active[2] ? 'active' : 'inactive'} href="#projects">projects</a></li>
                 <li><a className={active[3] ? 'active' : 'inactive'} href="#contact">contact</a></li>
-                <li><a target="_blank" rel="noreferrer" href="https://github.com/gothic459"><AiFillGithub/></a></li>
+                <li className='social-link'><a target="_blank" rel="noreferrer" href="https://github.com/gothic459"><AiFillGithub/></a></li>
             </ul>
         </Body>
     )
@@ -73,6 +73,9 @@ const Body = styled.nav`
     position: sticky;
     top:0;
     z-index:2;
+
+    display: flex;
+    align-items: center;
 
     
     ul{
@@ -88,6 +91,15 @@ const Body = styled.nav`
         display: flex;
         align-items: center;
         position: relative;
+        
+            &.social-link{
+                transform: scale(1.5);
+                transition: all 0.3s ease-in-out;
+                &:hover{
+                    transform:scale(2);
+                }
+            }
+
             &+li{
                 margin-left: 5%;
             }
