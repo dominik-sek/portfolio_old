@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 import Wave from '../img/wave-bottom.svg'
+import AnimatedBackground from './AnimatedBackground';
 const Section = (props) => {
     return ( 
         <Body style={props.style} id={props.id} >
+        <h1>{props.title}</h1>
+
+            <div className='content'>
             {props.children}
-        
+            </div>
+
             <footer>
             {props.id ==="contact" ? <img src={Wave}/> : null}
             </footer>
@@ -12,16 +17,14 @@ const Section = (props) => {
      );
 }
 const Body = styled.section`
-    height: 96vh;
-    border:1px solid red;
-    background: white;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position:relative;
     padding:0 10rem 0 10rem;
-    scroll-margin-top:4rem;
-
+    background: white;
+    scroll-margin:4rem;
     & * {
         color:black;
     }
@@ -36,7 +39,17 @@ const Body = styled.section`
             width:100%;
         }
     }
-    
+
+    & .content{
+        display: flex;
+        flex:1;
+    }
+
+    & div>div{
+        display: flex;
+        width:50%;
+        border:1px solid green;
+    }
     
 `
 

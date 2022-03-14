@@ -1,6 +1,7 @@
 
 import styled from 'styled-components';
 import Wave from '../img/wave.svg'
+import AnimatedBackground from './AnimatedBackground';
 const LandingPage = (props) => {
     return ( 
         <Body id={props.id} className='landing'>
@@ -25,7 +26,6 @@ const LandingPage = (props) => {
 
 
                 <div className='right-intro'>
-                    animation here
                 </div>
             </section>
 
@@ -41,9 +41,11 @@ const Body = styled.main`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: var(--clr-primary);
     position: relative;
-    
+    background: var(--clr-primary);  
+    scroll-margin:4rem;
+
+
     &::before{
         content:'';
         width:0;
@@ -64,10 +66,7 @@ const Body = styled.main`
     & .left-intro{
         width:50%;
 
-            & .buttons{
-
-
-            & ul{
+            & .buttons > ul{
                 margin-top: 3rem;
                 width:100%;
                 height:4rem;
@@ -81,15 +80,14 @@ const Body = styled.main`
                     align-items: center;
                     background:#fff;
                     
-                    &> a{
-                    text-decoration: none;
-                    color:#A4A4A4;
-                }
-                }   
+                        &> a{
+                        text-decoration: none;
+                        color:black;
+                            }
+                    }   
                 & li+li{
                     margin-left:5%;
                 }  
-            }
         }
     }
 

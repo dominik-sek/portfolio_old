@@ -24,21 +24,22 @@ const Navbar = () => {
           const aboutOffset = about.offsetTop;
           const projectsOffset = projects.offsetTop;
           const contactOffset = contact.offsetTop;
+          const offsetCalc = 200;
           
         //   console.log(`home: ${homeOffset}, about: ${aboutOffset}, project: ${projectsOffset}, contact: ${contactOffset}`)
           const currentScroll = window.scrollY;
         //   console.log(`current scroll: ${currentScroll}`)
 
-          if (currentScroll >= homeOffset - 100 && currentScroll < aboutOffset - 100) {
+          if (currentScroll >= homeOffset - offsetCalc && currentScroll < aboutOffset - offsetCalc) {
             toggleActive(0);
           }
-          if (currentScroll >= aboutOffset - 100 && currentScroll < projectsOffset - 100) {
+          if (currentScroll >= aboutOffset - offsetCalc && currentScroll < projectsOffset - offsetCalc) {
             toggleActive(1);
           }
-          if (currentScroll >= projectsOffset - 100 && currentScroll < contactOffset - 100) {
+          if (currentScroll >= projectsOffset - offsetCalc && currentScroll < contactOffset - offsetCalc) {
             toggleActive(2);
           }
-          if (currentScroll >= contactOffset - 100) {
+          if (currentScroll >= contactOffset - offsetCalc) {
             toggleActive(3);
           }
           
@@ -94,15 +95,15 @@ const Body = styled.nav`
                 justify-content: center;
                 
                 &::after{
-                content:'';
-                opacity: 0;
-                box-shadow:0px 2px 0px white;
-                width:0;
-                height:1px;
-                position:absolute;
-                bottom:0;
-                left: 0;
-                transition:all 0.3s ease-in-out;
+                    content:'';
+                    opacity: 0;
+                    box-shadow:0px 1px 0px white;
+                    width:0;
+                    height:0;
+                    position:absolute;
+                    bottom:0;
+                    left:0;
+                    transition:all 0.5s ease-in-out;
 
                  }
                  &:hover{
@@ -111,6 +112,7 @@ const Body = styled.nav`
                      }
                     &::after{
                         width:100%;
+                        height: 1px;
                         opacity: 1;
                     }
                 }
@@ -127,13 +129,11 @@ const Body = styled.nav`
             }
 
             & .active{
-                box-shadow:0px 2px 0px white;
+                box-shadow:0px 1px 0px white;
             }
 
             
         }
-
-
 
     }
 

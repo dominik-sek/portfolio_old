@@ -3,6 +3,10 @@ import Section from 'Components/Section';
 import LandingPage from 'Components/LandingPage';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import AboutSection from 'Pages/AboutSection';
+import ProjectsSection from 'Pages/ProjectsSection';
+import ContactSection from 'Pages/ContactSection';
+import AnimatedBackground from 'Components/AnimatedBackground';
 
 function App() {
 
@@ -12,26 +16,17 @@ function App() {
 
       <LandingPage id="home"/>
 
-      <Section id="about">
-          <h2>I am a third-year student at<br />
-        Academy of Applied Sciences in Tarnów<br />
-        currently studying applied computer science</h2>
-      </Section>
-
-      <Section id="projects">
-          <h2>projects section</h2>
-      </Section>
-
-      <Section id="contact">
-          <h2>
-            contact section
-          </h2>
-      </Section>
+      <AboutSection />
+      <ProjectsSection />
+      <ContactSection />
 
     </Wrapper>
   );
 }
 const Wrapper = styled.div`
+    & section+section{
+      margin-top:2rem;
+    }
 
 `
 

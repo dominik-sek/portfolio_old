@@ -1,7 +1,7 @@
 
 import styled, { keyframes } from 'styled-components'
 
-export default function AnimatedBackground(params) {
+export default function AnimatedBackground(props) {
     return (
         <Body>
             <ul className='squares'>
@@ -135,8 +135,4 @@ const Body = styled.div`
         width: 150px;
         height: 150px;
         animation-duration: 25s;
-    }
-
-}
-    
-`
+    }}`

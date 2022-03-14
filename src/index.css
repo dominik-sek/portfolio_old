@@ -16,7 +16,8 @@ html{
 }
 
 body {
-
+  background-attachment: fixed;
+  background-size: cover;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
