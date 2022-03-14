@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding:0;
@@ -5,17 +9,10 @@
   font-weight: bold;
 }
 
-html{
-  background: var(--clr-primary);
-  width:100%;
-  height:100%;
-}
-
 
 :root{
   --clr-primary: #01C0FF;
   --clr-secondary: #013c7a;
-
 }
 
 body {
@@ -26,14 +23,23 @@ body {
 
 }
 
-@media (min-width: 768px){
-  body{
-    margin:0 10% 0 10%;
-  }
 
-}
 
 h1{
   font-size: 3rem;
   color: white;
+}
+
+li > a {
+  width:100%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section,
+main,
+nav{
+  padding:0 10rem 0 10rem;
 }

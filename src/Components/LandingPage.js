@@ -1,21 +1,31 @@
 
 import styled from 'styled-components';
 import Wave from '../img/wave.svg'
-const LandingPage = () => {
+const LandingPage = (props) => {
     return ( 
-        <Body className='landing'>
+        <Body id={props.id} className='landing'>
+            
 
             <section className='landing-content'>
-                <div className='title'>
+                <div className='left-intro'>
                     <h1>Hi, my name is Dominik<br/>
                         I am a front end developer<br/>
                         based in Poland</h1>
-                </div>
+
                 <div className='buttons'>
-                <ul>
-                    <li><a href="#projects">my projects</a></li>
-                    <li><a href="about">about me</a></li>
-                </ul>
+
+                    <ul>
+                        <li><a href="#projects">my projects</a></li>
+                        <li><a href="#about">about me</a></li>
+                    </ul>
+
+                </div>
+                        
+                </div>
+
+
+                <div className='right-intro'>
+                    animation here
                 </div>
             </section>
 
@@ -27,53 +37,72 @@ const LandingPage = () => {
 }
  
 const Body = styled.main`
-    height: calc(100vh - 10rem);
+    height: calc(100vh - 4rem);
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    background: var(--clr-primary);
+    position: relative;
+    
+    &::before{
+        content:'';
+        width:0;
+        height:0;
+    }
+
     & .landing-content{
         flex:1;
-        margin-top:9rem;
+        display: flex;
+        padding:9rem 0 0 0;  
+    }
+    & .right-intro{
+        width:50%;
+        margin-left: 5%;
+        justify-self: flex-end;
     }
 
-    & .title{
+    & .left-intro{
         width:50%;
-    }
-    & .buttons{
-        width:50%;
-        & ul{
-            margin-top: 3rem;
-            width:100%;
-            height:4rem;
-            display: flex;
-            list-style-type: none;
 
-            & li{
-                width:50%;
+            & .buttons{
+
+
+            & ul{
+                margin-top: 3rem;
+                width:100%;
+                height:4rem;
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                background:#fff;
-                
-                &> a{
-                text-decoration: none;
-                color:#A4A4A4;
+                list-style-type: none;
+
+                & li{
+                    width:50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background:#fff;
+                    
+                    &> a{
+                    text-decoration: none;
+                    color:#A4A4A4;
+                }
+                }   
+                & li+li{
+                    margin-left:5%;
+                }  
             }
-            }   
-            & li+li{
-                margin-left:5%;
-            }  
         }
     }
+
     & img {
         width: 100%;
+
     }
     & footer{
         display: flex;
-        justify-content: flex-end;
-        position:absolute;
+        position: absolute;
         bottom:0;
+        left:0;
         width:100%;
-        margin: 0 -10% 0 -10%;
-}
+    }
 `
 export default LandingPage;
