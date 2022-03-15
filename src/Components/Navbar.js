@@ -7,6 +7,7 @@ import { device } from 'device';
 const Navbar = () => {
     const [active, setActive] = useState([false, false, false, false, false]);
     const [openDrawer, setOpenDrawer] = useState(false);
+
     const toggleActive = (index) => {
         let newActive = [false, false, false, false, false];
         newActive[index] = true;
@@ -54,6 +55,10 @@ const Navbar = () => {
         })
     }
 
+    const toggleDrawer = () => {
+        setOpenDrawer(!openDrawer);
+    }
+
     return(
         <Body>
             <ul className='desktop'>
@@ -64,32 +69,60 @@ const Navbar = () => {
                 <li><a className={active[3] ? 'active' : 'inactive'} href="#contact">contact</a></li>
                 <li className='social-link'><a target="_blank" rel="noreferrer" href="https://github.com/gothic459"><AiFillGithub/></a></li>
             </ul>
+            <StyledGiHamburgerMenu onClick={toggleDrawer} size={70} />
+
+            <Drawer className='mobile' open={openDrawer}>
+                <li style={{color:'white'}} onClick={toggleDrawer}>go back</li>
             
+            </Drawer>
         </Body>
     )
 }
-
+const StyledGiHamburgerMenu = styled(GiHamburgerMenu)`
+    @media ${device.tablet} {
+        display:none;
+    }
+`
+const Drawer = styled.div`
+    position: absolute;
+    left:0;
+    top:0;
+    background: black;
+    width:100%;
+    height:100vh;
+    z-index: 3;
+    transform:translateX(${props => props.open ? '0' : '-100%'});    
+    transition:transform 0.3s ease-in-out;
+`
 const Body = styled.nav`
-
-@media ${device.tablet}
-    {
-        background-color: var(--clr-primary);
-        height:4rem;
-        position: sticky;
-        top:0;
-        z-index:2;
-        display: flex;
-        align-items: center;
-        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-
-    &ul.mobile{
-        display: none;
+    background-color: var(--clr-primary);
+    height:4rem;
+    position: sticky;
+    top:0;
+    z-index:2;
+    display: flex;
+    align-items: center;
+    color:white;
+    
+    .desktop{
+        display:none;
     }
 
-    ul{
+    .mobile{
+
+    }
+    @media ${device.tablet} {
+        .mobile{
+            display:none;
+        }
+        .desktop{
+        display: flex;
+        }
+        ul{
         display: flex;
         justify-content: flex-end;
         width:100%;
+        
         & > li{
         color:white;
         height:3rem;
@@ -97,16 +130,15 @@ const Body = styled.nav`
         font-size:1.125rem;
         display: flex;
         align-items: center;
-        position: relative;
-
+        position:relative;
+        
             &.social-link{
                 transform: scale(1.5);
-                transition: all 0.3s ease-in-out;
+                transition: transform 0.3s ease-in-out;
                 &:hover{
                     transform:scale(2);
                 }
             }
-
             &+li{
                 margin-left: 5%;
             }
@@ -124,7 +156,7 @@ const Body = styled.nav`
                     left:0;
                     transition:all 0.5s ease-in-out;
 
-                 }
+                 }  
                  &:hover{
                      & > a{
                         color:'#A4A4A4';
@@ -146,17 +178,16 @@ const Body = styled.nav`
                 flex:1;
                 font-size:1.5rem;
             }
-
             & .active{
                 box-shadow:0px 1px 0px white;
             }
+            
         }
-
     }
     }
+    
 
 `
-
 
 
 

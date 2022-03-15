@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Wave from '../img/wave-bottom.svg'
-import AnimatedBackground from './AnimatedBackground';
+
 const Section = (props) => {
     return ( 
         <Body style={props.style} id={props.id} >
@@ -22,7 +22,6 @@ const Body = styled.section`
     flex-direction: column;
     justify-content: space-between;
     position:relative;
-    padding:0 10rem 0 10rem;
     background: white;
     scroll-margin:4rem;
     border:1px solid red;

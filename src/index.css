@@ -10,6 +10,7 @@ html {
 }
 
 h1 {
+  font-size: 1.5rem;
   color: white;
 }
 
@@ -40,27 +41,217 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (min-width: 20em) {
-  /* phones */
+main, section, nav {
+  padding: 0 1rem 0 1rem;
+}
+
+#home section > .middle {
+  width: 100%;
+}
+
+#home footer {
+  height: 20%;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+#about div.content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#about .content > .left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 2rem;
+  width: 100%;
+}
+
+#about .content > .right-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+#about .content > .right-side div, #about .content > .right-side ul {
+  width: 100%;
+  height: 100%;
+}
+
+#about .content > .right-side .familiar ul,
+#about .content > .right-side .learning ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+}
+
+#about .content > .right-side .familiar ul li,
+#about .content > .right-side .learning ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about .content > .right-side .familiar ul li :hover,
+#about .content > .right-side .learning ul li :hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+#about .content > .right-side .familiar ul li img,
+#about .content > .right-side .learning ul li img {
+  max-width: 33%;
+  max-height: 33%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#projects div.content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (min-width: 30.0625em) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  main, section, nav {
+    padding: 0 2rem 0 2rem;
+  }
 }
 
 @media (min-width: 40.0625em) {
   /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  main, section, nav {
+    padding: 0 3rem 0 3rem;
+  }
+  h1 {
+    font-size: 1.75rem;
+    color: white;
+  }
+  #home section > .middle {
+    width: 50%;
+  }
 }
 
 @media (min-width: 60.0625em) {
   /* tablet, landscape iPad, lo-res laptops ands desktops */
+  main, section, nav {
+    padding: 0 5rem 0 5rem;
+  }
+  h1 {
+    font-size: 2rem;
+    color: white;
+  }
 }
 
 @media (min-width: 64.0625em) {
   /* big landscape tablets, laptops, and desktops */
+  main, section, nav {
+    padding: 0 8rem 0 8rem;
+  }
+  #about div.content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #about .content > .left-side {
+    padding-top: 8rem;
+    width: 50%;
+  }
+  #about .content > .right-side {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 50%;
+  }
+  #about .content > .right-side div, #about .content > .right-side ul {
+    width: 100%;
+    height: 100%;
+  }
+  #about .content > .right-side .familiar ul,
+  #about .content > .right-side .learning ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+  }
+  #about .content > .right-side .familiar ul li,
+  #about .content > .right-side .learning ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #about .content > .right-side .familiar ul li :hover,
+  #about .content > .right-side .learning ul li :hover {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  #about .content > .right-side .familiar ul li img,
+  #about .content > .right-side .learning ul li img {
+    max-width: 33%;
+    max-height: 33%;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
 }
 
 @media (min-width: 80.0625em) {
   /* hi-res laptops and desktops */
+  main, section, nav {
+    padding: 0 10rem 0 10rem;
+  }
 }
 /*# sourceMappingURL=index.css.map */

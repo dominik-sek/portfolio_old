@@ -18,14 +18,13 @@ const LandingPage = (props) => {
 
 
             <section className='landing-content'>
-                <div className='left-intro'>
+                <div className='middle'>
                     <h1>Hi, my name is Dominik<br />
                         I am a front end developer<br />
                         based in Poland</h1>
 
                     <div className='buttons'>
-
-                        <ul >
+                        <ul>
                             <li><a href="#projects">my projects</a></li>
                             <li><a href="#about">about me</a></li>
                         </ul>
@@ -49,8 +48,8 @@ const Body = styled.main`
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    background: var(--clr-primary);  
     scroll-margin:4rem;
+    background: var(--clr-primary);  
 
 
     &::before{
@@ -64,13 +63,8 @@ const Body = styled.main`
         display: flex;
         padding:9rem 0 0 0;  
     }
-    & .right-intro{
-        width:50%;
-        margin-left: 5%;
-        justify-self: flex-end;
-    }
 
-    & .left-intro{
+    & .middle{
         width:50%;
 
             & .buttons > ul{
