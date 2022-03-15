@@ -23,9 +23,9 @@ function App() {
   );
 }
 const Wrapper = styled.div`
-    & section+section{
+    /* & section+section{
       margin-top:2rem;
-    }
+    } */
 
 `
 

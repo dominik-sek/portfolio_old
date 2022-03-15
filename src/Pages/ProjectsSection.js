@@ -1,5 +1,4 @@
 import Section from "Components/Section";
-import './sections.css';
 import styled from 'styled-components';
 const projects = [
 

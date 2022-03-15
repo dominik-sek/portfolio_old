@@ -1,6 +1,4 @@
 import Section from "Components/Section";
-import './sections.css';
-
 
 import HTMLico from '../img/html5.svg';
 import CSSico from '../img/css3.svg';

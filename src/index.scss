@@ -65,7 +65,7 @@ h3{
     height:100%;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-rows: 1fr 0.7fr 0.7fr;
     grid-template-areas: 
     "desc"
     "right"
@@ -78,6 +78,7 @@ h3{
     justify-content:center;
     align-items:center;
     grid-area:desc;
+    padding-bottom: 1rem;
   }
 
   .content> .left-side{
@@ -86,7 +87,7 @@ h3{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height:100%;
+    height:fit-content;
     grid-area: left;
 
     div, ul{
@@ -124,6 +125,7 @@ h3{
       justify-content: center;
       align-items: center;
       width:100%;
+      height:fit-content;
       grid-area: right;
 
       div, ul{
