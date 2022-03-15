@@ -48,19 +48,24 @@ main, section, nav{
 }
 
 h2{
-  font-size:1rem;
+  font-size:1.25rem;
 }
 h3{
   font-size:1rem;
 }
 
 #about{
-
+  h1{
+    font-size:1.3rem;
+  }
+  h2{
+    font-size: 1.1rem;
+  }
   div.content{
     height:100%;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
     grid-template-areas: 
     "desc"
     "right"

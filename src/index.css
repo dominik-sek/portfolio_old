@@ -54,11 +54,19 @@ main, section, nav {
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 h3 {
   font-size: 1rem;
+}
+
+#about h1 {
+  font-size: 1.3rem;
+}
+
+#about h2 {
+  font-size: 1.1rem;
 }
 
 #about div.content {
@@ -67,8 +75,8 @@ h3 {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 3fr;
-      grid-template-rows: 3fr;
+  -ms-grid-rows: 0.5fr 1fr 1fr;
+      grid-template-rows: 0.5fr 1fr 1fr;
       grid-template-areas: "desc" "right" "left";
 }
 

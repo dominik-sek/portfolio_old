@@ -4,8 +4,7 @@ import Wave from '../img/wave-bottom.svg'
 const Section = (props) => {
     return ( 
         <Body style={props.style} id={props.id} >
-        <h1>{props.title}</h1>
-
+ 
             <div className='content'>
             {props.children}
             </div>
@@ -49,6 +48,7 @@ const Body = styled.section`
         display: flex;
         width:50%;
     }
+
     
 `
 

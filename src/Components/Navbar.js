@@ -69,7 +69,7 @@ const Navbar = () => {
                 <li><a className={active[3] ? 'active' : 'inactive'} href="#contact">contact</a></li>
                 <li className='social-link'><a target="_blank" rel="noreferrer" href="https://github.com/gothic459"><AiFillGithub/></a></li>
             </ul>
-            <StyledGiHamburgerMenu onClick={toggleDrawer} size={70} />
+            <StyledGiHamburgerMenu onClick={toggleDrawer} size={'2rem'} />
 
             <Drawer className='mobile' open={openDrawer}>
                 <li style={{color:'white'}} onClick={toggleDrawer}>go back</li>
@@ -96,13 +96,13 @@ const Drawer = styled.div`
 `
 const Body = styled.nav`
     background-color: var(--clr-primary);
-    height:4rem;
     position: sticky;
     top:0;
     z-index:2;
     display: flex;
     align-items: center;
     color:white;
+    height:3rem;
     
     .desktop{
         display:none;
@@ -112,6 +112,7 @@ const Body = styled.nav`
 
     }
     @media ${device.tablet} {
+        height:4rem;
         .mobile{
             display:none;
         }

@@ -21,9 +21,9 @@ const AboutSection = () => {
     return (
         <Section id="about" title="about me">
             <div className="desc">
-            <h2>I am a third-year student at<br />
+            <h1>I am a third-year student at<br />
           Academy of Applied Sciences in Tarnów<br />
-          currently studying applied computer science</h2>
+          currently studying applied computer science</h1>
             </div>
         <div className='left-side'>
             <h2>Currently learning:</h2>
