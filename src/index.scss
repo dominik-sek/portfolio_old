@@ -78,7 +78,7 @@ h3{
     justify-content:center;
     align-items:center;
     grid-area:desc;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
 
   .content> .left-side{
@@ -158,11 +158,16 @@ h3{
 }
 
 #projects{
+    height: auto;
+    min-height: 95vh;
     
   div.content{
       width:100%;
       display: flex;
-
+      flex-direction: column;
+      div{
+        margin-top: 1rem;
+      }
   }
 }
 

@@ -16,16 +16,16 @@ function App() {
       <LandingPage id="home"/>
 
       <AboutSection />
-      {/* <ProjectsSection /> */}
+      <ProjectsSection />
       <ContactSection />
 
     </Wrapper>
   );
 }
 const Wrapper = styled.div`
-    /* & section+section{
+    & section{
       margin-top:2rem;
-    } */
+    }
 
 `
 
