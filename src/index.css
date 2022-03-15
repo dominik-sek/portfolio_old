@@ -62,19 +62,34 @@ h3 {
 }
 
 #about div.content {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 3fr;
+      grid-template-rows: 3fr;
+      grid-template-areas: "desc" "right" "left";
 }
 
 #about div.desc {
-  margin: 1rem;
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: desc;
 }
 
 #about .content > .left-side {
@@ -91,8 +106,11 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
+  width: 100%;
   height: 100%;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: left;
 }
 
 #about .content > .left-side div, #about .content > .left-side ul {
@@ -147,7 +165,10 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
+  width: 100%;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: right;
 }
 
 #about .content > .right-side div, #about .content > .right-side ul {
@@ -219,6 +240,24 @@ h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: (2fr)[3];
+        grid-template-rows: repeat(3, 2fr);
+        grid-template-areas: "desc desc desc desc" "left left right right" "left left right right";
+  }
+  #about .content > .desc {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: desc;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   #about .content > .left-side {
     display: -webkit-box;
@@ -234,7 +273,16 @@ h3 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 50%;
+    width: 100%;
+    height: 100%;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: left;
+  }
+  #about .content > .left-side div, #about .content > .left-side ul {
+    width: 100%;
     height: 100%;
   }
   #about .content > .left-side .learning ul {
@@ -257,14 +305,14 @@ h3 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 100%;
+    height: 100%;
   }
   #about .content > .left-side .learning ul li :hover {
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
   }
   #about .content > .left-side .learning ul li img {
-    max-width: 33%;
-    max-height: 33%;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
@@ -282,7 +330,13 @@ h3 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 50%;
+    width: 100%;
+    height: 100%;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: right;
   }
   #about .content > .right-side div, #about .content > .right-side ul {
     width: 100%;
@@ -306,14 +360,15 @@ h3 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 100%;
   }
   #about .content > .right-side .familiar ul li :hover {
     -webkit-transform: scale(1.5);
             transform: scale(1.5);
   }
   #about .content > .right-side .familiar ul li img {
-    max-width: 33%;
-    max-height: 33%;
+    -o-object-fit: cover;
+       object-fit: cover;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
