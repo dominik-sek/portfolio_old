@@ -20,11 +20,24 @@ import SASSico from '../img/sass.svg'
 const AboutSection = () => {
     return (
         <Section id="about" title="about me">
-        <div className='left-side'>
-          <h2>I am a third-year student at<br />
+            <div className="desc">
+            <h2>I am a third-year student at<br />
           Academy of Applied Sciences in Tarnów<br />
           currently studying applied computer science</h2>
+            </div>
+        <div className='left-side'>
+            <h2>Currently learning:</h2>
+            <div className="learning">
+                
+                <ul >
+                    <li><img src={TSico}/></li>
+                    <li><img src={MDBico}/></li>
+                    <li><img src={EXico}/></li>
+                    <li><img src={FIGMAico}/></li>
+                    <li><img src={SASSico}/></li>
 
+                </ul>
+            </div>
         </div>
 
         <div className='right-side'>
@@ -44,18 +57,7 @@ const AboutSection = () => {
                 </ul>
 
             </div>
-            <h2>Currently learning:</h2>
-            <div className="learning">
-                
-            <ul >
-                    <li><img src={TSico}/></li>
-                    <li><img src={MDBico}/></li>
-                    <li><img src={EXico}/></li>
-                    <li><img src={FIGMAico}/></li>
-                    <li><img src={SASSico}/></li>
 
-                </ul>
-            </div>
         </div>
       </Section>
       );
