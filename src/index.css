@@ -62,11 +62,11 @@ h3 {
 }
 
 #about h1 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 #about h2 {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 #about div.content {
@@ -98,7 +98,7 @@ h3 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: desc;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 #about .content > .left-side {
@@ -228,6 +228,45 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+#contact div.content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5rem;
+}
+
+#contact div.content > form {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact div.content > form * {
+  margin: 1rem;
+}
+
+#contact div.content > form input {
+  height: 2rem;
+}
+
+#contact div.content > form textarea {
+  height: 5rem;
+  resize: none;
+}
+
+#contact div.content > form button {
+  height: 3rem;
 }
 
 @media (min-width: 30.0625em) {
@@ -386,6 +425,38 @@ h3 {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
+  #contact div.content {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #contact div.content > form {
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact div.content > form * {
+    margin: 1rem;
+  }
+  #contact div.content > form input {
+    height: 2rem;
+  }
+  #contact div.content > form textarea {
+    height: 5rem;
+    resize: none;
+  }
+  #contact div.content > form button {
+    height: 3rem;
+  }
 }
 
 @media (min-width: 60.0625em) {
@@ -396,6 +467,38 @@ h3 {
   h1 {
     font-size: 2rem;
     color: white;
+  }
+  #contact div.content {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #contact div.content > form {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact div.content > form * {
+    margin: 1rem;
+  }
+  #contact div.content > form input {
+    height: 2rem;
+  }
+  #contact div.content > form textarea {
+    height: 5rem;
+    resize: none;
+  }
+  #contact div.content > form button {
+    height: 3rem;
   }
 }
 
