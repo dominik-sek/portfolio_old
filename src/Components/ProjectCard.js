@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
 export default function ProjectCard(params) {
     return (
