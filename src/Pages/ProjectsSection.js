@@ -64,7 +64,8 @@ const projects = [
 ]
 const ProjectsSection = () => {
     return (
-        <Section id="projects" title="some of my projects">
+        <Section id="projects" title={"Some of my projects"}>
+
             {projects.map((project, index)=>{
                 return(
                     <ProjectCard key={project.img} bg={project.img}>
@@ -94,8 +95,7 @@ const ProjectsSection = () => {
       );
 }
 const ProjectCard = styled.div`
-    height: 33vh;
-    min-width:100%;
+    height: 40vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,7 +103,7 @@ const ProjectCard = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-color: #989898;
+    background-color: #000000ad;
     background-blend-mode: multiply;
 
     && >div { 

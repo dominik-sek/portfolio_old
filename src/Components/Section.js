@@ -4,26 +4,57 @@ import Wave from '../img/wave-bottom.svg'
 const Section = (props) => {
     return ( 
         <Body style={props.style} id={props.id} >
- 
+        <SectionHr title={props.title} />
+
             <div className='content'>
             {props.children}
             </div>
 
             <footer>
-            {props.id ==="contact" ? <img src={Wave}/> : null}
+            {props.id ==="contact" ? <img alt="wave background" src={Wave}/> : null}
             </footer>
         </Body>
      );
 }
+const SectionHr = styled.hr`
+    margin-top:1rem;
+    margin-bottom:1rem;
+    line-height: 1vh;
+    position: relative;
+    outline: 0;
+    border: 0;
+    text-align: center;
+    height: 1.5rem;
+    opacity: .7;
+    
+     &::before {
+        content: '';
+        background: linear-gradient(to right, transparent, var(--clr-primary), transparent);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 0.1rem;
+  }
+    &::after {
+        content: '${props=>props.title}';
+        position: relative;
+        display: inline-block;
+        color: black;
+        padding: 0 .5em;
+        line-height: 1.5em;
+        background-color: #fcfcfa;
+  }
+
+`
 const Body = styled.section`
-    height: 95vh;
+    min-height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position:relative;
     background: white;
     scroll-margin:4rem;
-    border:1px solid red;
     & * {
         color:black;
     }

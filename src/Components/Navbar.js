@@ -3,7 +3,7 @@ import {AiFillGithub} from 'react-icons/ai'
 import React, { useState, useEffect } from 'react';
 import {GiHamburgerMenu} from 'react-icons/gi'
 import { device } from 'device';
-
+import {MdOutlineArrowBackIosNew} from 'react-icons/md'
 const Navbar = () => {
     const [active, setActive] = useState([false, false, false, false, false]);
     const [openDrawer, setOpenDrawer] = useState(false);
@@ -59,6 +59,11 @@ const Navbar = () => {
         setOpenDrawer(!openDrawer);
     }
 
+    useEffect(()=>{
+        if(!openDrawer) document.body.style.overflow = 'visible';
+        if(openDrawer) document.body.style.overflow = 'hidden';
+    },[openDrawer])
+
     return(
         <Body>
             <ul className='desktop'>
@@ -72,8 +77,13 @@ const Navbar = () => {
             <StyledGiHamburgerMenu onClick={toggleDrawer} size={'2rem'} />
 
             <Drawer className='mobile' open={openDrawer}>
-                <li style={{color:'white'}} onClick={toggleDrawer}>go back</li>
-            
+                <ul className='mobile-drawer'>
+                    <li  onClick={toggleDrawer}><MdOutlineArrowBackIosNew/></li>
+                    <li><a className={active[0] ? 'active' : 'inactive'} onClick={toggleDrawer} href="#home">home</a></li>
+                    <li><a className={active[1] ? 'active' : 'inactive'} onClick={toggleDrawer} href="#about">about</a></li>
+                    <li><a className={active[2] ? 'active' : 'inactive'} onClick={toggleDrawer} href="#projects">projects</a></li>
+                    <li><a className={active[3] ? 'active' : 'inactive'} onClick={toggleDrawer} href="#contact">contact</a></li>
+                </ul>
             </Drawer>
         </Body>
     )
@@ -87,12 +97,34 @@ const Drawer = styled.div`
     position: absolute;
     left:0;
     top:0;
-    background: black;
+    background: var(--clr-primary);
     width:100%;
     height:100vh;
     z-index: 3;
     transform:translateX(${props => props.open ? '0' : '-100%'});    
     transition:transform 0.3s ease-in-out;
+
+    & .mobile-drawer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+        & li{
+            width:100%;
+            height:25vh;
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            font-size: 2rem;
+            
+            & a{
+                text-decoration: none;
+                color:white;
+            }
+        }
+    }
+
 `
 const Body = styled.nav`
     background-color: var(--clr-primary);
@@ -108,9 +140,6 @@ const Body = styled.nav`
         display:none;
     }
 
-    .mobile{
-
-    }
     @media ${device.tablet} {
         height:4rem;
         .mobile{

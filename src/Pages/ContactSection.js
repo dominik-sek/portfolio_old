@@ -1,7 +1,7 @@
 import Section from "Components/Section";
 const ContactSection = () => {
     return (
-        <Section id="contact" title="get in touch">
+        <Section id="contact" title="Contact">
 
         <form name="contact" method="POST" data-netlify="true">
         <h1>Get in touch</h1>
