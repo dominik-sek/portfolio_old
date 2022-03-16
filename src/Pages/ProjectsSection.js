@@ -5,12 +5,28 @@ import {AiOutlineLink, AiFillGithub} from 'react-icons/ai';
 const projects = [
 
     {
-        'title': 'Portfolio website',
-        'desc': 'My portfolio website',
-        'img': 'https://i.imgur.com/xeDpEwP.png',
+        'title': 'Portfolio',
+        'desc': 'My current portfolio',
+        'img': 'https://i.imgur.com/r3ipqQC.png',
         'github': 'https://github.com/gothic459/portfolio',
         'live': 'https://dsek.dev',
-        'tags': ['React', 'HTML','JS','CSS', 'React Router','Styled-components']
+        'tags': ['React', 'HTML','JS','CSS', 'SASS','Styled-components', 'Figma']
+    },
+    {
+        'title': 'Old Portfolio',
+        'desc': 'My old portfolio',
+        'img': 'https://i.imgur.com/xeDpEwP.png',
+        'github': 'https://github.com/gothic459/portfolio',
+        'live': 'https://old.dsek.dev',
+        'tags': ['React', 'HTML','JS','CSS', 'React Router','Styled-components', 'Figma']
+    },
+    {
+        'title': 'FRB Creative',
+        'desc': 'A local business’ website - I was responsible for the design and development of the website',
+        'img': 'https://i.imgur.com/Btlw7yS.png',
+        'github': 'https://github.com/gothic459/frb-creative',
+        'live':'https://frb-creative.netlify.app/',
+        'tags': ['HTML','JS','CSS', 'React','Styled-components','Figma']
     },
     {
         'title': 'Blockchain miners simulator',
@@ -44,22 +60,7 @@ const projects = [
         'live': '',
         'tags': ['React', 'HTML','JS','CSS','React Router','Styled-components']
     },
-    {
-        'title': 'Movie database 2',
-        'desc': 'Another try at a movie database website, uni project',
-        'img': 'https://i.imgur.com/2IVAhYY.png',
-        'github': 'https://github.com/gothic459/movie-db',
-        'live': '',
-        'tags': ['React', 'HTML','JS','CSS','React Router','Styled-components']
-    },
-    {
-        'title': 'Movie database 2',
-        'desc': 'Another try at a movie database website, uni project',
-        'img': 'https://i.imgur.com/2IVAhYY.png',
-        'github': 'https://github.com/gothic459/movie-db',
-        'live': '',
-        'tags': ['React', 'HTML','JS','CSS','React Router','Styled-components']
-    }
+
 
 ]
 const ProjectsSection = () => {
@@ -120,7 +121,7 @@ const ProjectCard = styled.div`
         }
         p{
             color:#989898;
-            font-size:0.8rem;
+            font-size:0.9rem;
         }
 
         *{
@@ -136,6 +137,10 @@ const ProjectCard = styled.div`
             width:50%;
             display: flex;
             justify-content: center;
+            transition: transform 0.3s ease-in-out;
+            &:hover{
+                transform: scale(1.5);
+            }
             &>svg{
                 height:2rem;
                 width:2rem;

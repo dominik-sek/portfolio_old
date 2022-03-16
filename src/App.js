@@ -1,12 +1,10 @@
 import Navbar from 'Components/Navbar';
-import Section from 'Components/Section';
 import LandingPage from 'Components/LandingPage';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import AboutSection from 'Pages/AboutSection';
 import ProjectsSection from 'Pages/ProjectsSection';
 import ContactSection from 'Pages/ContactSection';
-import { device } from 'device';
 
 function App() {
 
