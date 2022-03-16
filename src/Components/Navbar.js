@@ -172,7 +172,7 @@ const Body = styled.nav`
             &+li{
                 margin-left: 5%;
             }
-            &:not(:first-child){
+            &:not(:first-child):not(:last-child){
                 justify-content: center;
                 
                 &::after{

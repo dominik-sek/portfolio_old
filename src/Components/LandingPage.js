@@ -57,6 +57,11 @@ const Body = styled.main`
     & .middle{
         width:50%;
 
+        & h1{
+            padding-left: 2rem;
+            border-left:10px solid white;
+        }
+
             & .buttons > ul{
                 margin-top: 3rem;
                 width:100%;
@@ -72,13 +77,10 @@ const Body = styled.main`
                     background:#fff;
                     position: relative;
                     z-index:1;
+                    transition: background-color 0.3s ease-in-out ;
 
                     &:hover{
-                        &::after{
-                            opacity: 1;
-                            height:100%;
-                            width:100%;
-                        }
+                        background-color: rgba(0,0,0,0.2)
                     }
                         &> a{
                         text-decoration: none;

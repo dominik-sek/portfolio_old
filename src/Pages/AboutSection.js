@@ -21,8 +21,8 @@ const AboutSection = () => {
 
             <div className="desc">
             <h1>I am a third-year student at<br />
-          Academy of Applied Sciences in Tarnów<br />
-          currently studying applied computer science</h1>
+          <a href="https://international.pwsztar.edu.pl/" rel="noreferrer" target="_blank" style={{color:'var(--clr-primary)', textDecoration:'none'}}> Academy of Applied Sciences in Tarnów </a><br />
+          currently studying <span style={{color:'var(--clr-primary)'}}>Applied Computer Science</span></h1>
 
             </div>
         <div className='left-side'>
@@ -60,6 +60,12 @@ const AboutSection = () => {
             </div>
 
         </div>
+        <div className="desc-bottom">
+            <h1>
+                {/* todo something about me */}
+            </h1>
+
+            </div>
       </Section>
       );
 }

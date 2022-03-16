@@ -40,7 +40,7 @@ const SectionHr = styled.hr`
         content: '${props=>props.title}';
         position: relative;
         display: inline-block;
-        color: black;
+        color: var(--clr-primary);
         padding: 0 .5em;
         line-height: 1.5em;
         background-color: #fcfcfa;

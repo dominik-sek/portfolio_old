@@ -13,20 +13,20 @@ const projects = [
         'tags': ['React', 'HTML','JS','CSS', 'SASS','Styled-components', 'Figma']
     },
     {
-        'title': 'Old Portfolio',
-        'desc': 'My old portfolio',
-        'img': 'https://i.imgur.com/xeDpEwP.png',
-        'github': 'https://github.com/gothic459/portfolio/tree/6ad545e6454bc51c6d4b3ccc052c552ce0f66f2d',
-        'live': 'https://old.dsek.dev',
-        'tags': ['React', 'HTML','JS','CSS', 'React Router','Styled-components', 'Figma']
-    },
-    {
         'title': 'FRB Creative',
         'desc': 'A local business’ website - I was responsible for the design and development of the website',
         'img': 'https://i.imgur.com/Btlw7yS.png',
         'github': 'https://github.com/gothic459/frb-creative',
         'live':'https://frb-creative.netlify.app/',
         'tags': ['HTML','JS','CSS', 'React','Styled-components','Figma']
+    },
+    {
+        'title': 'Old Portfolio',
+        'desc': 'My old portfolio',
+        'img': 'https://i.imgur.com/xeDpEwP.png',
+        'github': 'https://github.com/gothic459/portfolio/tree/6ad545e6454bc51c6d4b3ccc052c552ce0f66f2d',
+        'live': 'https://old.dsek.dev',
+        'tags': ['React', 'HTML','JS','CSS', 'React Router','Styled-components', 'Figma']
     },
     {
         'title': 'Blockchain miners simulator',

@@ -254,12 +254,22 @@ h3{
       grid-template-areas: 
       "desc desc desc desc"
       "left left right right"
-      "left left right right";
+      "left left right right"
+      "desc-bottom desc-bottom desc-bottom desc-bottom";
     }
     .content> .desc{
       grid-area: desc;
       width:100%;
       display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+    .content> .desc-bottom{
+      grid-area: desc-bottom;
+      width:100%;
+      display: flex;
+      justify-content: center;
+      
     }
 
     .content> .left-side{
@@ -316,6 +326,7 @@ h3{
         }
 
         .familiar{
+            border-left:1px solid var(--clr-primary);
             ul {
                 display:grid;
                 grid-template-columns:repeat(3,1fr);
