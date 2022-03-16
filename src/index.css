@@ -81,9 +81,9 @@ h3 {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 0.2fr 0.7fr 0.7fr;
-      grid-template-rows: 0.2fr 0.7fr 0.7fr;
-      grid-template-areas: "desc" "right" "left";
+  -ms-grid-rows: 0.5fr 0.7fr 0.7fr;
+      grid-template-rows: 0.5fr 0.7fr 0.7fr;
+      grid-template-areas: "desc" "right" "left";
 }
 
 #about div.desc {
@@ -327,7 +327,7 @@ h3 {
         grid-template-columns: repeat(4, 1fr);
     -ms-grid-rows: (2fr)[3];
         grid-template-rows: repeat(3, 2fr);
-        grid-template-areas: "desc desc desc desc" "left left right right" "left left right right" "desc-bottom desc-bottom desc-bottom desc-bottom";
+        grid-template-areas: "desc desc desc desc" "left left right right" "left left right right" "desc-bottom desc-bottom desc-bottom desc-bottom";
   }
   #about .content > .desc {
     -ms-grid-row: 1;

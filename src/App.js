@@ -1,5 +1,5 @@
 import Navbar from 'Components/Navbar';
-import LandingPage from 'Components/LandingPage';
+import LandingPage from 'Pages/LandingPage';
 import React from 'react';
 import styled from 'styled-components';
 import AboutSection from 'Pages/AboutSection';

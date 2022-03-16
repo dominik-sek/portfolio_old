@@ -22,12 +22,12 @@ const LandingPage = (props) => {
                     </div>
 
                 </div>
-
+                <footer>
+                {/* <img alt="wave background" src={Wave} /> */}
+            </footer>
             </section>
 
-            <footer>
-                <img alt="wave background" src={Wave} />
-            </footer>
+
         </Body>
     );
 }
@@ -52,6 +52,17 @@ const Body = styled.main`
         flex:1;
         display: flex;
         padding:9rem 0 0 0;  
+        
+        & footer{
+            display: flex;
+            position: absolute;
+            bottom:0;
+            left:0;
+            width:100%;
+            background-image: url(${Wave});
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     }
 
     & .middle{
@@ -95,16 +106,7 @@ const Body = styled.main`
         }
     }
 
-    & img {
-        width: 100%;
 
-    }
-    & footer{
-        display: flex;
-        position: absolute;
-        bottom:0;
-        left:0;
-        width:100%;
-    }
+    
 `
 export default LandingPage;

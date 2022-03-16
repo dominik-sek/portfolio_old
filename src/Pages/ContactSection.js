@@ -1,4 +1,5 @@
 import Section from "Components/Section";
+
 const ContactSection = () => {
     return (
         <Section id="contact" title="Get in touch">
@@ -10,6 +11,7 @@ const ContactSection = () => {
             <input type="hidden" name="_template" value="table"/>
             <button type="submit" >Send</button>
         </form>
+        
       </Section>
       );
 }

@@ -45,6 +45,7 @@ const SectionHr = styled.hr`
         line-height: 1.5em;
         background-color: #fcfcfa;
   }
+  
 
 `
 const Body = styled.section`
