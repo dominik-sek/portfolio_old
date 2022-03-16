@@ -16,7 +16,7 @@ const projects = [
         'title': 'Old Portfolio',
         'desc': 'My old portfolio',
         'img': 'https://i.imgur.com/xeDpEwP.png',
-        'github': 'https://github.com/gothic459/portfolio',
+        'github': 'https://github.com/gothic459/portfolio/tree/6ad545e6454bc51c6d4b3ccc052c552ce0f66f2d',
         'live': 'https://old.dsek.dev',
         'tags': ['React', 'HTML','JS','CSS', 'React Router','Styled-components', 'Figma']
     },
