@@ -83,18 +83,15 @@ const Body = styled.section`
                 text-indent: 1rem;
                 outline-color: var(--clr-primary);
             }
-
-            & textarea{}
-
             & button{
                 width:50%;
                 align-self: center;
-                border-radius:10px;
-                background-color: var(--clr-primary);
+                /* background-color: var(--clr-primary); */
                 transition: background-color 0.3s ease-in-out;
+                transition: color 0.3s ease-in-out;
                 &:hover{
-                    background-color: rgba(0,0,0,0.1);
-                    background-blend-mode: multiply;
+                    background-color: rgba(0,0,0,1);
+                    color: white;
                 }
             }
         }

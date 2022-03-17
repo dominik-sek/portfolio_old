@@ -31,6 +31,8 @@ li > a {
 :root {
   --clr-primary: #01C0FF;
   --clr-secondary: #013c7a;
+  --nav-load-time:300ms;
+  --content-load-time:600ms;
 }
 
 body {
@@ -294,10 +296,112 @@ h3 {
   border-radius: 5px;
 }
 
+/* animations */
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideInTop {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* animations */
 @media (min-width: 30.0625em) {
   /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
   main, section, nav {
     padding: 0 2rem 0 2rem;
+  }
+  /* page load */
+  nav li:first-child {
+    -webkit-animation: var(--nav-load-time) slideInLeft ease-in;
+            animation: var(--nav-load-time) slideInLeft ease-in;
+  }
+  nav li {
+    -webkit-animation: var(--nav-load-time) slideInRight ease-in;
+            animation: var(--nav-load-time) slideInRight ease-in;
+  }
+  #home div.middle h1 {
+    opacity: 0;
+    -webkit-animation: var(--nav-load-time) slideInLeft ease-in var(--nav-load-time);
+            animation: var(--nav-load-time) slideInLeft ease-in var(--nav-load-time);
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  #home div.middle .buttons {
+    opacity: 0;
+    -webkit-animation: calc(2 * var(--nav-load-time)) slideInLeft ease-in var(--content-load-time);
+            animation: calc(2 * var(--nav-load-time)) slideInLeft ease-in var(--content-load-time);
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
 }
 

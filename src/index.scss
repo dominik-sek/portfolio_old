@@ -25,6 +25,8 @@ li > a {
 :root{
   --clr-primary: #01C0FF;
   --clr-secondary: #013c7a;
+  --nav-load-time:300ms;
+  --content-load-time:600ms;
 }
 
 body {
@@ -214,6 +216,43 @@ h3{
   }
 }
 
+/* animations */
+@keyframes slideInLeft {
+  from{
+    transform: translateX(-100%);
+    opacity:0;
+  }
+  to{
+    transform: translateX(0);
+    opacity:1;
+  }
+}
+@keyframes slideInRight {
+  from{
+    transform: translateX(100%);
+    opacity:0;
+  }
+  to{
+    transform: translateX(0);
+    opacity:1;
+  }
+}
+
+@keyframes slideInTop{
+  from{
+    transform: translateY(-100%);
+    opacity:0;
+
+  }
+  to{
+    transform: translateY(0);
+    opacity:1;
+
+  }
+}
+
+/* animations */
+
 @media(min-width:20em){
 
 }
@@ -223,6 +262,33 @@ h3{
   main, section, nav{
     padding:0 2rem 0 2rem;
   }
+
+  /* page load */
+  nav{
+      li:first-child{
+        animation: var(--nav-load-time) slideInLeft ease-in;    
+      }
+      li{
+        animation: var(--nav-load-time) slideInRight ease-in; 
+      }
+  }
+  #home{
+     div.middle{
+        h1{
+          opacity: 0;
+          animation: var(--nav-load-time) slideInLeft ease-in var(--nav-load-time);
+          animation-fill-mode: forwards;
+
+        }
+        .buttons{
+          opacity: 0;
+          animation: calc(2 * var(--nav-load-time)) slideInLeft ease-in var(--content-load-time);
+          animation-fill-mode: forwards;
+        }
+    }
+
+  }
+
   
 }
 @media (min-width:40.0625em)  { 
