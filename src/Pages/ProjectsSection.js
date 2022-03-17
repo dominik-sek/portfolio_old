@@ -155,6 +155,7 @@ const ProjectCard = styled.div`
         display:flex;
         flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
         & h3{
             font-size: 0.7rem;
             border-radius: 5px;
