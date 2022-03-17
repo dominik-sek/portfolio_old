@@ -66,14 +66,38 @@ const Body = styled.section`
         bottom:0;
         left:0;
         width:100%;
+        
+
         & img {
             width:100%;
+            z-index: 1;
         }
     }
 
     & .content{
         display: flex;
         flex:1;
+        & form{
+            height:fit-content;
+            & input, textarea{
+                text-indent: 1rem;
+                outline-color: var(--clr-primary);
+            }
+
+            & textarea{}
+
+            & button{
+                width:50%;
+                align-self: center;
+                border-radius:10px;
+                background-color: var(--clr-primary);
+                transition: background-color 0.3s ease-in-out;
+                &:hover{
+                    background-color: rgba(0,0,0,0.1);
+                    background-blend-mode: multiply;
+                }
+            }
+        }
     }
 
     & div>div{

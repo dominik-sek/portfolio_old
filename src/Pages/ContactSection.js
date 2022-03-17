@@ -1,5 +1,4 @@
 import Section from "Components/Section";
-
 const ContactSection = () => {
     return (
         <Section id="contact" title="Get in touch">
@@ -15,5 +14,6 @@ const ContactSection = () => {
       </Section>
       );
 }
+
 export default ContactSection;
 

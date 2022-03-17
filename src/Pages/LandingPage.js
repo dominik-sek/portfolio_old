@@ -62,6 +62,7 @@ const Body = styled.main`
             background-image: url(${Wave});
             background-repeat: no-repeat;
             background-size: cover;
+            z-index: 0;
         }
     }
 
@@ -88,14 +89,19 @@ const Body = styled.main`
                     background:#fff;
                     position: relative;
                     z-index:1;
-                    transition: background-color 0.3s ease-in-out ;
+                    transition: background-color 0.3s ease-in-out;
 
                     &:hover{
-                        background-color: rgba(0,0,0,0.2)
+                        background-color: rgba(0,0,0,1);
+                        background-blend-mode: multiply;
+                        &>a{
+                            color:white;
+                        }
                     }
                         &> a{
                         text-decoration: none;
                         color:black;
+                        transition: color 0.3s ease-in-out;
                         }
 
 

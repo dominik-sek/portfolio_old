@@ -83,7 +83,7 @@ h3 {
       grid-template-columns: 1fr;
   -ms-grid-rows: 0.5fr 0.7fr 0.7fr;
       grid-template-rows: 0.5fr 0.7fr 0.7fr;
-      grid-template-areas: "desc" "right" "left";
+      grid-template-areas: "desc" "right" "left";
 }
 
 #about div.desc {
@@ -260,7 +260,8 @@ h3 {
 }
 
 #contact div.content > form {
-  width: 90%;
+  width: 100%;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -327,7 +328,7 @@ h3 {
         grid-template-columns: repeat(4, 1fr);
     -ms-grid-rows: (2fr)[3];
         grid-template-rows: repeat(3, 2fr);
-        grid-template-areas: "desc desc desc desc" "left left right right" "left left right right" "desc-bottom desc-bottom desc-bottom desc-bottom";
+        grid-template-areas: "desc desc desc desc" "left left right right" "left left right right" "desc-bottom desc-bottom desc-bottom desc-bottom";
   }
   #about .content > .desc {
     -ms-grid-row: 1;
@@ -482,7 +483,7 @@ h3 {
             justify-content: center;
   }
   #contact div.content > form {
-    width: 70%;
+    width: 60%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -525,7 +526,7 @@ h3 {
             justify-content: center;
   }
   #contact div.content > form {
-    width: 50%;
+    width: 60%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -568,12 +569,18 @@ h3 {
   main, section, nav {
     padding: 0 8rem 0 8rem;
   }
+  #contact div.content > form {
+    width: 50%;
+  }
 }
 
 @media (min-width: 80.0625em) {
   /* hi-res laptops and desktops */
   main, section, nav {
     padding: 0 10rem 0 10rem;
+  }
+  #contact div.content > form {
+    width: 40%;
   }
 }
 /*# sourceMappingURL=index.css.map */
