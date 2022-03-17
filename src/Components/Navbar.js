@@ -7,7 +7,11 @@ import {MdOutlineArrowBackIosNew} from 'react-icons/md'
 const Navbar = () => {
     const [active, setActive] = useState([false, false, false, false, false]);
     const [openDrawer, setOpenDrawer] = useState(false);
+    const [width, setWitdh] = useState(window.innerWidth);
 
+    const checkWidth = () =>{
+        setWitdh(window.innerWidth);
+    }
     const toggleActive = (index) => {
         let newActive = [false, false, false, false, false];
         newActive[index] = true;
@@ -64,6 +68,13 @@ const Navbar = () => {
         if(openDrawer) document.body.style.overflow = 'hidden';
     },[openDrawer])
 
+    useEffect(()=>{
+        window.addEventListener('resize', checkWidth);
+        if(width/16 >= 40.0625){
+            setOpenDrawer(false);
+        }
+    },[width])
+
     return(
         <Body>
             <ul className='desktop'>
@@ -117,7 +128,9 @@ const Drawer = styled.div`
             align-items:center;
             justify-content: center;
             font-size: 2rem;
-            
+            +li{
+                border-top:1px solid white;
+            }
             & a{
                 text-decoration: none;
                 color:white;
@@ -185,8 +198,8 @@ const Body = styled.nav`
                     bottom:0;
                     left:0;
                     transition:all 0.5s ease-in-out;
+                 }
 
-                 }  
                  &:hover{
                      & > a{
                         color:'#A4A4A4';
