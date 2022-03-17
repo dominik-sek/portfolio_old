@@ -41,8 +41,12 @@ main, section, nav{
   padding:0 1rem 0 1rem;
 }
 #home{
+  
   section>.middle{
     width:100%;
+    >h1{
+      position: relative;
+    }
   }
   footer{
     height:20%;
@@ -309,6 +313,7 @@ h3{
     section>.middle{
       width:50%;
     }
+    
     
 
   }
