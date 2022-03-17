@@ -71,7 +71,16 @@ const Body = styled.main`
 
         & h1{
             padding-left: 2rem;
-            border-left:10px solid white;
+            
+            &::before{
+                content:'';
+                height:100%;
+                position:absolute;
+                left:0;
+                bottom:0;
+                width:10px;
+                border-left:10px solid white;
+            }
         }
 
             & .buttons > ul{

@@ -278,7 +278,12 @@ h3{
           opacity: 0;
           animation: var(--nav-load-time) slideInLeft ease-in var(--nav-load-time);
           animation-fill-mode: forwards;
-
+        
+        }
+        h1::before{
+          opacity: 0;
+          animation: calc(2 * var(--nav-load-time)) slideInLeft ease-in calc(2 * var(--nav-load-time));
+          animation-fill-mode: forwards;
         }
         .buttons{
           opacity: 0;
@@ -288,7 +293,7 @@ h3{
     }
 
   }
-
+  
   
 }
 @media (min-width:40.0625em)  { 

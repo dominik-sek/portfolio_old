@@ -396,6 +396,13 @@ h3 {
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
   }
+  #home div.middle h1::before {
+    opacity: 0;
+    -webkit-animation: calc(2 * var(--nav-load-time)) slideInLeft ease-in calc(2 * var(--nav-load-time));
+            animation: calc(2 * var(--nav-load-time)) slideInLeft ease-in calc(2 * var(--nav-load-time));
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
   #home div.middle .buttons {
     opacity: 0;
     -webkit-animation: calc(2 * var(--nav-load-time)) slideInLeft ease-in var(--content-load-time);
