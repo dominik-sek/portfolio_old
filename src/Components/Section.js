@@ -10,9 +10,9 @@ const Section = (props) => {
             {props.children}
             </div>
 
-            <footer>
-            {props.id ==="contact" ? <img alt="wave background" src={Wave}/> : null}
-            </footer>
+            
+            {props.id ==="contact" ? <footer><img alt="wave background" src={Wave}/> </footer> : null}
+            
         </Body>
      );
 }

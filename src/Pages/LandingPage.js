@@ -22,9 +22,9 @@ const LandingPage = (props) => {
                     </div>
 
                 </div>
-                <footer>
-                {/* <img alt="wave background" src={Wave} /> */}
-            </footer>
+
+                <div className="wave" />
+
             </section>
 
 
@@ -41,7 +41,7 @@ const Body = styled.main`
     scroll-margin:4rem;
     background: var(--clr-primary);  
 
-
+    
     &::before{
         content:'';
         width:0;
@@ -51,9 +51,12 @@ const Body = styled.main`
     & .landing-content{
         flex:1;
         display: flex;
-        padding:9rem 0 0 0;  
-        
-        & footer{
+        padding:9rem 0 0 0;
+        & *:not(.wave){
+            z-index:1;
+        }
+
+        & .wave{
             display: flex;
             position: absolute;
             bottom:0;
@@ -63,7 +66,9 @@ const Body = styled.main`
             background-repeat: no-repeat;
             background-size: cover;
             z-index: 0;
+            height:20vh;
         }
+        
     }
 
     & .middle{
@@ -99,6 +104,7 @@ const Body = styled.main`
                     position: relative;
                     z-index:1;
                     transition: background-color 0.3s ease-in-out;
+                    border:1px solid var(--clr-primary);
 
                     &:hover{
                         background-color: rgba(0,0,0,1);
