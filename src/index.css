@@ -11,7 +11,7 @@ html {
 
 h1 {
   font-size: 1.5rem;
-  color: white;
+  color: var(--clr-secondary);
 }
 
 li > a {
@@ -30,7 +30,11 @@ li > a {
 
 :root {
   --clr-primary: #01C0FF;
-  --clr-secondary: #013c7a;
+  --clr-secondary: #FFF;
+  --clr-primary-dark: #000;
+  --clr-secondary-dark: #a6a6ae;
+  --clr-hover-dark: #323232;
+  --clr-tags: #01C0FF;
   --nav-load-time:300ms;
   --content-load-time:600ms;
 }
@@ -89,7 +93,7 @@ h3 {
       grid-template-columns: 1fr;
   -ms-grid-rows: 0.5fr 0.7fr 0.7fr;
       grid-template-rows: 0.5fr 0.7fr 0.7fr;
-      grid-template-areas: "desc" "right" "left";
+      grid-template-areas: "desc" "right" "left";
 }
 
 #about div.desc {
@@ -423,7 +427,7 @@ h3 {
   }
   h1 {
     font-size: 1.75rem;
-    color: white;
+    color: var(--clr-secondary);
   }
   #home section > .middle {
     width: 50%;
@@ -443,7 +447,7 @@ h3 {
         grid-template-columns: repeat(4, 1fr);
     -ms-grid-rows: (2fr)[3];
         grid-template-rows: repeat(3, 2fr);
-        grid-template-areas: "desc desc desc desc" "left left right right" "left left right right" "desc-bottom desc-bottom desc-bottom desc-bottom";
+        grid-template-areas: "desc desc desc desc" "left left right right" "left left right right" "desc-bottom desc-bottom desc-bottom desc-bottom";
   }
   #about .content > .desc {
     -ms-grid-row: 1;
@@ -629,7 +633,7 @@ h3 {
   }
   h1 {
     font-size: 2rem;
-    color: white;
+    color: var(--clr-secondary);
   }
   #contact div.content {
     width: 100%;

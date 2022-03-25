@@ -1,15 +1,17 @@
 import styled from 'styled-components';
-import {AiFillGithub} from 'react-icons/ai'
+import { AiFillGithub } from 'react-icons/ai'
 import React, { useState, useEffect } from 'react';
-import {GiHamburgerMenu} from 'react-icons/gi'
+import { GiHamburgerMenu } from 'react-icons/gi'
 import { device } from 'device';
-import {MdOutlineArrowBackIosNew} from 'react-icons/md'
+import { MdOutlineArrowBackIosNew } from 'react-icons/md'
+import { GrMoon, GrSun } from 'react-icons/gr'
 const Navbar = () => {
     const [active, setActive] = useState([false, false, false, false, false]);
     const [openDrawer, setOpenDrawer] = useState(false);
     const [width, setWitdh] = useState(window.innerWidth);
+    const [dark, setDark] = useState(false);
 
-    const checkWidth = () =>{
+    const checkWidth = () => {
         setWitdh(window.innerWidth);
     }
     const toggleActive = (index) => {
@@ -21,40 +23,41 @@ const Navbar = () => {
     useEffect(() => {
         window.addEventListener("scroll", () => {
 
-          const home = document.querySelector("#home");
-          const about = document.querySelector("#about");
-          const projects = document.querySelector("#projects");
-          const contact = document.querySelector("#contact");
-        
-          //this is just in case the user changes height
-          const homeOffset = home.offsetTop;
-          const aboutOffset = about.offsetTop;
-          const projectsOffset = projects.offsetTop;
-          const contactOffset = contact.offsetTop;
-          const offsetCalc = 200;
-          
-        //   console.log(`home: ${homeOffset}, about: ${aboutOffset}, project: ${projectsOffset}, contact: ${contactOffset}`)
-          const currentScroll = window.scrollY;
-        //   console.log(`current scroll: ${currentScroll}`)
+            const home = document.querySelector("#home");
+            const about = document.querySelector("#about");
+            const projects = document.querySelector("#projects");
+            const contact = document.querySelector("#contact");
 
-          if (currentScroll >= homeOffset - offsetCalc && currentScroll < aboutOffset - offsetCalc) {
-            toggleActive(0);
-          }
-          if (currentScroll >= aboutOffset - offsetCalc && currentScroll < projectsOffset - offsetCalc) {
-            toggleActive(1);
-          }
-          if (currentScroll >= projectsOffset - offsetCalc && currentScroll < contactOffset - offsetCalc) {
-            toggleActive(2);
-          }
-          if (currentScroll >= contactOffset - offsetCalc) {
-            toggleActive(3);
-          }
-          
-        })}, []);
+            //this is just in case the user changes height
+            const homeOffset = home.offsetTop;
+            const aboutOffset = about.offsetTop;
+            const projectsOffset = projects.offsetTop;
+            const contactOffset = contact.offsetTop;
+            const offsetCalc = 200;
 
-    const scrollToTop = () =>{
+            //   console.log(`home: ${homeOffset}, about: ${aboutOffset}, project: ${projectsOffset}, contact: ${contactOffset}`)
+            const currentScroll = window.scrollY;
+            //   console.log(`current scroll: ${currentScroll}`)
+
+            if (currentScroll >= homeOffset - offsetCalc && currentScroll < aboutOffset - offsetCalc) {
+                toggleActive(0);
+            }
+            if (currentScroll >= aboutOffset - offsetCalc && currentScroll < projectsOffset - offsetCalc) {
+                toggleActive(1);
+            }
+            if (currentScroll >= projectsOffset - offsetCalc && currentScroll < contactOffset - offsetCalc) {
+                toggleActive(2);
+            }
+            if (currentScroll >= contactOffset - offsetCalc) {
+                toggleActive(3);
+            }
+
+        })
+    }, []);
+
+    const scrollToTop = () => {
         document.documentElement.scrollTo({
-            top:0,
+            top: 0,
             behavior: 'smooth'
         })
     }
@@ -62,34 +65,54 @@ const Navbar = () => {
     const toggleDrawer = () => {
         setOpenDrawer(!openDrawer);
     }
+    
+    const setDarkMode = () => {
+        setDark(!dark);
+    }
 
     useEffect(()=>{
-        if(!openDrawer) document.body.style.overflow = 'visible';
-        if(openDrawer) document.body.style.overflow = 'hidden';
-    },[openDrawer])
 
-    useEffect(()=>{
+
+        if(dark){
+            document.documentElement.style.setProperty('--clr-primary', '#000000');
+            document.documentElement.style.setProperty('--clr-secondary', '#a6a6ae');
+        }else{
+            document.documentElement.style.setProperty('--clr-primary', '#01C0FF');
+            document.documentElement.style.setProperty('--clr-secondary', '#fff');
+
+        }
+    },[dark])
+
+
+    useEffect(() => {
+        if (!openDrawer) document.body.style.overflow = 'visible';
+        if (openDrawer) document.body.style.overflow = 'hidden';
+    }, [openDrawer])
+
+    useEffect(() => {
         window.addEventListener('resize', checkWidth);
-        if(width/16 >= 40.0625){
+        if (width / 16 >= 40.0625) {
             setOpenDrawer(false);
         }
-    },[width])
+    }, [width])
 
-    return(
+    return (
         <Body>
+
             <ul className='desktop'>
                 <li>Dominik Sęk</li>
+                <li> {dark ? <GrSun  onClick={setDarkMode} /> : <GrMoon  onClick={setDarkMode} />}</li>
                 <li><a className={active[0] ? 'active' : 'inactive'} onClick={scrollToTop} href="#home">home</a></li>
                 <li><a className={active[1] ? 'active' : 'inactive'} href="#about">about</a></li>
                 <li><a className={active[2] ? 'active' : 'inactive'} href="#projects">projects</a></li>
                 <li><a className={active[3] ? 'active' : 'inactive'} href="#contact">contact</a></li>
-                <li className='social-link'><a target="_blank" rel="noreferrer" href="https://github.com/gothic459"><AiFillGithub/></a></li>
+                <li className='social-link'><a target="_blank" rel="noreferrer" href="https://github.com/gothic459"><AiFillGithub /></a></li>
             </ul>
             <StyledGiHamburgerMenu onClick={toggleDrawer} size={'2rem'} />
 
             <Drawer className='mobile' open={openDrawer}>
                 <ul className='mobile-drawer'>
-                    <li  onClick={toggleDrawer}><MdOutlineArrowBackIosNew/></li>
+                    <li onClick={toggleDrawer}><MdOutlineArrowBackIosNew /></li>
                     <li><a className={active[0] ? 'active' : 'inactive'} onClick={toggleDrawer} href="#home">home</a></li>
                     <li><a className={active[1] ? 'active' : 'inactive'} onClick={toggleDrawer} href="#about">about</a></li>
                     <li><a className={active[2] ? 'active' : 'inactive'} onClick={toggleDrawer} href="#projects">projects</a></li>
@@ -129,11 +152,11 @@ const Drawer = styled.div`
             justify-content: center;
             font-size: 2rem;
             +li{
-                border-top:1px solid white;
+                border-top:1px solid var(--clr-secondary);
             }
             & a{
                 text-decoration: none;
-                color:white;
+                color:var(--clr-secondary);
             }
         }
     }
@@ -146,7 +169,7 @@ const Body = styled.nav`
     z-index:2;
     display: flex;
     align-items: center;
-    color:white;
+    color:var(--clr-secondary);
     height:3rem;
     
     .desktop{
@@ -167,7 +190,7 @@ const Body = styled.nav`
         width:100%;
         
         & > li{
-        color:white;
+        color:var(--clr-secondary);
         height:3rem;
         width:6.875rem;
         font-size:1.125rem;
@@ -185,13 +208,13 @@ const Body = styled.nav`
             &+li{
                 margin-left: 5%;
             }
-            &:not(:first-child):not(:last-child){
+            &:not(:first-child):not(:nth-child(2)):not(:last-child){
                 justify-content: center;
                 
                 &::after{
                     content:'';
                     opacity: 0;
-                    box-shadow:0px 1px 0px white;
+                    box-shadow:0px 1px 0px var(--clr-secondary);
                     width:0;
                     height:0;
                     position:absolute;
@@ -214,12 +237,29 @@ const Body = styled.nav`
         
             &> a{
                 text-decoration: none;
-                color:white;
+                color:var(--clr-secondary);
             }
             
             &:first-child{
                 flex:1;
                 font-size:1.5rem;
+            }
+            &:nth-child(2){
+                justify-content: center;
+                transform: scale(1.5);
+                & svg{
+                    & path{
+                        stroke:white;
+                      }
+                    &:hover{
+                        cursor: pointer;
+                        & path{
+                            fill: white;
+                        }
+                    }
+                }
+
+
             }
             & .active{
                 box-shadow:0px 1px 0px white;

@@ -159,7 +159,7 @@ const ProjectCard = styled.div`
         & h3{
             font-size: 0.7rem;
             border-radius: 5px;
-            background:var(--clr-primary);
+            background:var(--clr-tags);
             padding:0.3rem;
             & +h3{
                 margin-left:0.3rem;
