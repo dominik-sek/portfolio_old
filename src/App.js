@@ -1,29 +1,21 @@
-import Navbar from 'Components/Navbar';
-import LandingPage from 'Pages/LandingPage';
 import React from 'react';
 import styled from 'styled-components';
-import AboutSection from 'Pages/AboutSection';
-import ProjectsSection from 'Pages/ProjectsSection';
-import ContactSection from 'Pages/ContactSection';
 
 function App() {
 
   return (
-    <Wrapper>
-          <Navbar />
-      <LandingPage id="home"/>
-
-      <AboutSection />
-      <ProjectsSection />
-      <ContactSection />
-
-    </Wrapper>
+    <Oof>
+        big oof
+    </Oof>
   );
 }
-const Wrapper = styled.div`
-    & section{
-      margin-top:2rem;
-    }
+
+const Oof = styled.section`
+    height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10rem;
 
 `
 
