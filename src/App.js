@@ -1,8 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import {useNavigate} from 'react-router-dom';
 
 function App() {
+    const navigateToGithub = () =>{
+        window.location.replace('github.com/gothic459')
+    }
 
+    React.useEffect(() => {
+        navigateToGithub();
+    },[])
   return (
     <Oof>
         big oof
