@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 function App() {
     const navigateToGithub = () =>{
-        window.location.replace('github.com/gothic459')
+        window.location.href = 'github.com/gothic459';
     }
 
     React.useEffect(() => {
